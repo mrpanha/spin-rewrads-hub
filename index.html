@@ -114,6 +114,30 @@
     <a href="privacy.html" style="color:#e9c46a; margin-right:15px;">Privacy Policy</a>
     <a href="contact.html" style="color:#e9c46a;">Contact Us</a>
 </footer>
-    
+    <script>
+function updateTimeAgo() {
+    const elements = document.querySelectorAll('.time-ago');
+    const now = new Date();
+
+    elements.forEach(el => {
+        const date = new Date(el.getAttribute('data-time'));
+        const seconds = Math.floor((now - date) / 1000);
+
+        let interval = Math.floor(seconds / 3600);
+        if (interval >= 1) {
+            el.innerText = interval + (interval === 1 ? " hour ago" : " hours ago");
+            return;
+        }
+        interval = Math.floor(seconds / 60);
+        if (interval >= 1) {
+            el.innerText = interval + (interval === 1 ? " minute ago" : " minutes ago");
+            return;
+        }
+        el.innerText = "just now";
+    });
+}
+// Run on load
+updateTimeAgo();
+</script>
 </body>
 </html>
