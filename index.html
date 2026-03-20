@@ -24,7 +24,7 @@
     <table style="width: 100%; border-collapse: collapse; background: #1b263b; border-radius: 10px; overflow: hidden;">
         <thead>
             <tr style="background: #415a77; color: white;">
-                <th style="padding: 15px; text-align: left; width: 30%;">Added</th>
+                <th style="padding: 15px; text-align: left; width: 30%;">Date</th>
                 <th style="padding: 15px; text-align: left;">Reward Details</th>
                 <th style="padding: 15px; text-align: center; width: 25%;">Action</th>
             </tr>
@@ -32,7 +32,7 @@
         <tbody id="reward-table-body">
     <tr style="border-bottom: 1px solid #415a77;">
         <td style="padding: 15px; text-align: left; color: #e9c46a;">
-            <span class="time-ago" data-time="2026-03-20T13:50:00Z">Checking...</span>
+            2026-03-20
         </td>
         <td style="padding: 15px; text-align: left;">
             25 Free Spins <span style="background: #2a9d8f; color: white; font-size: 0.7em; padding: 2px 5px; border-radius: 3px; margin-left: 5px;">VERIFIED ✅</span>
@@ -44,7 +44,7 @@
 
     <tr style="border-bottom: 1px solid #415a77;">
         <td style="padding: 15px; text-align: left; color: #e9c46a;">
-            <span class="time-ago" data-time="2026-03-20T11:20:00Z">Checking...</span>
+            2026-03-20
         </td>
         <td style="padding: 15px; text-align: left;">
             25 Free Spins <span style="background: #2a9d8f; color: white; font-size: 0.7em; padding: 2px 5px; border-radius: 3px; margin-left: 5px;">VERIFIED ✅</span>
@@ -56,7 +56,7 @@
 
     <tr style="border-bottom: 1px solid #415a77;">
         <td style="padding: 15px; text-align: left; color: #e9c46a;">
-            <span class="time-ago" data-time="2026-03-19T22:10:00Z">Checking...</span>
+            2026-03-19
         </td>
         <td style="padding: 15px; text-align: left;">
             Reward Bundle <span style="background: #2a9d8f; color: white; font-size: 0.7em; padding: 2px 5px; border-radius: 3px; margin-left: 5px;">VERIFIED ✅</span>
@@ -132,29 +132,6 @@
     <a href="contact.html" style="color:#e9c46a;">Contact Us</a>
 </footer>
     <script>
-function updateTimeAgo() {
-    const elements = document.querySelectorAll('.time-ago');
-    const now = new Date();
-
-    elements.forEach(el => {
-        const date = new Date(el.getAttribute('data-time'));
-        const seconds = Math.floor((now - date) / 1000);
-
-        let interval = Math.floor(seconds / 3600);
-        if (interval >= 1) {
-            el.innerText = interval + (interval === 1 ? " hour ago" : " hours ago");
-            return;
-        }
-        interval = Math.floor(seconds / 60);
-        if (interval >= 1) {
-            el.innerText = interval + (interval === 1 ? " minute ago" : " minutes ago");
-            return;
-        }
-        el.innerText = "just now";
-    });
-}
-// Run on load
-updateTimeAgo();
 </script>
 </body>
 </html>
