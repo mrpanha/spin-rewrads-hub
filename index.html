@@ -506,8 +506,13 @@
                 document.cookie = 'googtrans=; ' + exp;
                 document.cookie = 'googtrans=; ' + exp + '; domain=' + location.hostname;
                 document.cookie = 'googtrans=; ' + exp + '; domain=.' + location.hostname;
-                // Clean URL without reload
                 history.replaceState(null, '', location.pathname);
+            }
+            // Read active language from googtrans cookie and sync the dropdown
+            var match = document.cookie.match(/googtrans=\/en\/([a-z]{2,})/);
+            if (match) {
+                var sel = document.getElementById('lang-select');
+                if (sel) sel.value = match[1];
             }
         })();
 
