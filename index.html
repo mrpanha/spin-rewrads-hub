@@ -499,22 +499,30 @@
         });
 
         // ── Language switcher (native select, works on all mobile browsers) ──
+        // On page load: if ?lang=en param present, wipe all translate cookies then clean the URL
+        (function() {
+            if (location.search.indexOf('lang=en') !== -1) {
+                var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+                document.cookie = 'googtrans=; ' + exp;
+                document.cookie = 'googtrans=; ' + exp + '; domain=' + location.hostname;
+                document.cookie = 'googtrans=; ' + exp + '; domain=.' + location.hostname;
+                // Clean URL without reload
+                history.replaceState(null, '', location.pathname);
+            }
+        })();
+
         document.getElementById('lang-select').addEventListener('change', function() {
-            const lang = this.value;
+            var lang = this.value;
+            var domain = location.hostname;
             if (!lang) {
-                // Restore original English
-                const iframe = document.querySelector('.goog-te-menu-frame');
-                if (iframe) iframe.contentWindow.document.querySelector('.goog-te-menu2-item:first-child').click();
-                const restore = document.querySelector('.goog-te-banner-frame');
-                if (restore) restore.contentWindow.document.getElementById(':1').click();
-                // Fallback: reload with no translate cookie
-                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
-                location.reload();
+                // Wipe cookies then reload with ?lang=en so the IIFE above clears them on arrival
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domain;
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + domain;
+                location.href = location.pathname + '?lang=en';
                 return;
             }
-            // Set Google Translate cookie and reload — most reliable mobile method
-            const domain = location.hostname;
+            // Set Google Translate cookie and reload
             document.cookie = 'googtrans=/en/' + lang + '; path=/';
             document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
             location.reload();
