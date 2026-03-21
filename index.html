@@ -46,76 +46,74 @@
         h1 { color: var(--accent); }
         .btn { display: inline-block; background: var(--accent); color: #0d1b2a; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
 
-        /* ===== FLOATING TOGGLE BUTTON ===== */
-        #theme-toggle {
+        /* ===== FLOATING BUTTONS (left side, unified size) ===== */
+        .fab {
             position: fixed;
-            bottom: 28px;
-            right: 24px;
+            left: 18px;
             z-index: 9999;
-            width: 54px;
-            height: 54px;
+            width: 50px;
+            height: 50px;
             border-radius: 50%;
             border: none;
+            font-size: 1.4em;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.18s;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .fab:active { transform: scale(0.93); }
+
+        #theme-toggle {
+            bottom: 24px;
             background: var(--accent);
             color: #0d1b2a;
-            font-size: 1.5em;
-            cursor: pointer;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-            transition: background 0.3s, transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-        #theme-toggle:hover { transform: scale(1.12); background: var(--accent-hover); }
-
-        /* ===== FLOATING TRANSLATE BUTTON ===== */
         #translate-btn {
-            position: fixed;
-            bottom: 92px;
-            right: 24px;
-            z-index: 9999;
-            width: 54px;
-            height: 54px;
-            border-radius: 50%;
-            border: none;
+            bottom: 84px;
             background: var(--bg3);
             color: var(--text);
-            font-size: 1.5em;
-            cursor: pointer;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-            transition: background 0.3s, transform 0.2s;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-        #translate-btn:hover { transform: scale(1.12); }
 
         /* Translate popup panel */
         #translate-panel {
             position: fixed;
-            bottom: 158px;
-            right: 18px;
+            bottom: 144px;
+            left: 14px;
             z-index: 9998;
             background: var(--bg2);
             border: 2px solid var(--border);
             border-radius: 14px;
             padding: 14px 16px;
-            box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.45);
             display: none;
-            min-width: 220px;
+            width: 230px;
             text-align: center;
         }
         #translate-panel p {
             margin: 0 0 10px;
             font-size: 0.85em;
             color: var(--text-muted);
-            font-weight: 600;
-            letter-spacing: 0.3px;
+            font-weight: 700;
         }
-        /* Hide Google's default top bar branding */
-        .goog-te-banner-frame { display: none !important; }
+        #lang-select {
+            width: 100%;
+            padding: 10px 12px;
+            border-radius: 8px;
+            border: 2px solid var(--border);
+            background: var(--bg);
+            color: var(--text);
+            font-size: 1em;
+            cursor: pointer;
+            outline: none;
+        }
+
+        /* Hide Google banner */
+        .goog-te-banner-frame, .skiptranslate { display: none !important; }
         body { top: 0 !important; }
-        .skiptranslate { display: none !important; }
 
         /* YouTube embed */
         .yt-wrapper {
@@ -440,49 +438,54 @@
         <a href="contact.html" style="color:var(--accent);">Contact Us</a>
     </footer>
 
-    <!-- Floating Dark/Light Mode Toggle -->
-    <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
-
-    <!-- Floating Translate Button -->
-    <button id="translate-btn" title="Translate page">🌐</button>
+    <!-- Floating Buttons -->
+    <button class="fab" id="theme-toggle" title="Toggle dark/light mode" aria-label="Toggle theme">🌙</button>
+    <button class="fab" id="translate-btn" title="Translate page" aria-label="Translate page">🌐</button>
 
     <!-- Translate Popup Panel -->
-    <div id="translate-panel">
+    <div id="translate-panel" role="dialog" aria-label="Language selector">
         <p>🌐 Select Language</p>
-        <div id="google_translate_element"></div>
+        <select id="lang-select" aria-label="Choose language">
+            <option value="">🇬🇧 English</option>
+            <option value="tl">🇵🇭 Filipino</option>
+            <option value="id">🇮🇩 Bahasa Indonesia</option>
+            <option value="th">🇹🇭 Thai</option>
+            <option value="vi">🇻🇳 Tiếng Việt</option>
+            <option value="ms">🇲🇾 Malay</option>
+            <option value="pt">🇧🇷 Português</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="fr">🇫🇷 Français</option>
+            <option value="hi">🇮🇳 Hindi</option>
+        </select>
     </div>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "62d40c0995614c6f93a2871746cca36b"}'></script><!-- End Cloudflare Web Analytics -->
 
-    <!-- Google Translate -->
-    <script type="text/javascript">
+    <!-- Google Translate (loaded async, no render blocking) -->
+    <script>
         function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'en',
-                includedLanguages: 'tl,id,th,vi,ms,pt,es,de,fr,hi',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
+            new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'gt_hidden');
         }
     </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <div id="gt_hidden" style="display:none"></div>
+    <script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <script>
-        // Dark/Light toggle
-        const btn = document.getElementById('theme-toggle');
-        const body = document.body;
+        // ── Theme toggle ──
+        const themeBtn = document.getElementById('theme-toggle');
         if (localStorage.getItem('theme') === 'light') {
-            body.classList.add('light-mode');
-            btn.textContent = '☀️';
+            document.body.classList.add('light-mode');
+            themeBtn.textContent = '☀️';
         }
-        btn.addEventListener('click', function() {
-            body.classList.toggle('light-mode');
-            const isLight = body.classList.contains('light-mode');
-            btn.textContent = isLight ? '☀️' : '🌙';
-            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        themeBtn.addEventListener('click', function() {
+            document.body.classList.toggle('light-mode');
+            const light = document.body.classList.contains('light-mode');
+            themeBtn.textContent = light ? '☀️' : '🌙';
+            localStorage.setItem('theme', light ? 'light' : 'dark');
         });
 
-        // Translate panel toggle
+        // ── Translate panel toggle ──
         const tBtn = document.getElementById('translate-btn');
         const tPanel = document.getElementById('translate-panel');
         tBtn.addEventListener('click', function(e) {
@@ -493,6 +496,28 @@
             if (!tPanel.contains(e.target) && e.target !== tBtn) {
                 tPanel.style.display = 'none';
             }
+        });
+
+        // ── Language switcher (native select, works on all mobile browsers) ──
+        document.getElementById('lang-select').addEventListener('change', function() {
+            const lang = this.value;
+            if (!lang) {
+                // Restore original English
+                const iframe = document.querySelector('.goog-te-menu-frame');
+                if (iframe) iframe.contentWindow.document.querySelector('.goog-te-menu2-item:first-child').click();
+                const restore = document.querySelector('.goog-te-banner-frame');
+                if (restore) restore.contentWindow.document.getElementById(':1').click();
+                // Fallback: reload with no translate cookie
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+                document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + location.hostname;
+                location.reload();
+                return;
+            }
+            // Set Google Translate cookie and reload — most reliable mobile method
+            const domain = location.hostname;
+            document.cookie = 'googtrans=/en/' + lang + '; path=/';
+            document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
+            location.reload();
         });
     </script>
 
