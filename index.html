@@ -6,10 +6,116 @@
     <title>Spin Rewards Hub - Daily Game Links & Guides</title>
     <style>
         * { box-sizing: border-box; }
-        body { font-family: sans-serif; background-color: #0d1b2a; color: #e0e1dd; text-align: center; padding: 20px 0; margin: 0; }
+
+        /* ===== DARK MODE (default) ===== */
+        :root {
+            --bg: #0d1b2a;
+            --bg2: #1b263b;
+            --bg3: #415a77;
+            --text: #e0e1dd;
+            --text-muted: #c8d0e0;
+            --accent: #e9c46a;
+            --accent-hover: #f5d68a;
+            --border: #415a77;
+            --border2: #2d4060;
+            --header-grad1: #415a77;
+            --header-grad2: #2c3e5a;
+            --tip-bg: #415a77;
+            --footer-border: #444;
+        }
+
+        /* ===== LIGHT MODE ===== */
+        body.light-mode {
+            --bg: #f0f4f8;
+            --bg2: #ffffff;
+            --bg3: #dce8f5;
+            --text: #1a2636;
+            --text-muted: #3a4f6a;
+            --accent: #c9952a;
+            --accent-hover: #e0a830;
+            --border: #aac4e0;
+            --border2: #d0e0f0;
+            --header-grad1: #5b8ab5;
+            --header-grad2: #3a6a9a;
+            --tip-bg: #dce8f5;
+            --footer-border: #ccc;
+        }
+
+        body { font-family: sans-serif; background-color: var(--bg); color: var(--text); text-align: center; padding: 20px 0; margin: 0; transition: background-color 0.3s, color 0.3s; }
         .container { width: 90%; max-width: 800px; margin: auto; padding: 20px; }
-        h1 { color: #e9c46a; }
-        .btn { display: inline-block; background: #e9c46a; color: #0d1b2a; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
+        h1 { color: var(--accent); }
+        .btn { display: inline-block; background: var(--accent); color: #0d1b2a; padding: 15px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 20px; }
+
+        /* ===== FLOATING TOGGLE BUTTON ===== */
+        #theme-toggle {
+            position: fixed;
+            bottom: 28px;
+            right: 24px;
+            z-index: 9999;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: none;
+            background: var(--accent);
+            color: #0d1b2a;
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+            transition: background 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #theme-toggle:hover { transform: scale(1.12); background: var(--accent-hover); }
+
+        /* ===== FLOATING TRANSLATE BUTTON ===== */
+        #translate-btn {
+            position: fixed;
+            bottom: 92px;
+            right: 24px;
+            z-index: 9999;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: none;
+            background: var(--bg3);
+            color: var(--text);
+            font-size: 1.5em;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+            transition: background 0.3s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #translate-btn:hover { transform: scale(1.12); }
+
+        /* Translate popup panel */
+        #translate-panel {
+            position: fixed;
+            bottom: 158px;
+            right: 18px;
+            z-index: 9998;
+            background: var(--bg2);
+            border: 2px solid var(--border);
+            border-radius: 14px;
+            padding: 14px 16px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.4);
+            display: none;
+            min-width: 220px;
+            text-align: center;
+        }
+        #translate-panel p {
+            margin: 0 0 10px;
+            font-size: 0.85em;
+            color: var(--text-muted);
+            font-weight: 600;
+            letter-spacing: 0.3px;
+        }
+        /* Hide Google's default top bar branding */
+        .goog-te-banner-frame { display: none !important; }
+        body { top: 0 !important; }
+        .skiptranslate { display: none !important; }
 
         /* YouTube embed */
         .yt-wrapper {
@@ -30,36 +136,36 @@
 
         /* Rewards section */
         .rewards-section { margin: 20px 0; }
-        .rewards-section h2 { color: #e9c46a; }
+        .rewards-section h2 { color: var(--accent); }
 
         /* Date group */
         .date-group { margin-bottom: 28px; }
 
         .date-header {
-            background: linear-gradient(135deg, #415a77, #2c3e5a);
-            color: #e9c46a;
+            background: linear-gradient(135deg, var(--header-grad1), var(--header-grad2));
+            color: var(--accent);
             font-size: 1.25em;
             font-weight: bold;
             padding: 16px 20px;
             border-radius: 10px 10px 0 0;
             text-align: center;
             letter-spacing: 0.5px;
-            border: 2px solid #415a77;
+            border: 2px solid var(--border);
             border-bottom: none;
         }
 
         .reward-table {
             width: 100%;
             border-collapse: collapse;
-            background: #1b263b;
+            background: var(--bg2);
             border-radius: 0 0 10px 10px;
             overflow: hidden;
-            border: 2px solid #415a77;
+            border: 2px solid var(--border);
             border-top: none;
         }
 
         .reward-table tr {
-            border-bottom: 1px solid #2d4060;
+            border-bottom: 1px solid var(--border2);
         }
         .reward-table tr:last-child {
             border-bottom: none;
@@ -72,7 +178,7 @@
 
         .td-link {
             text-align: left;
-            color: #c8d0e0;
+            color: var(--text-muted);
             font-weight: 600;
             font-size: 1em;
             width: 35%;
@@ -80,7 +186,7 @@
 
         .td-spins {
             text-align: left;
-            color: #e0e1dd;
+            color: var(--text);
             font-size: 1em;
             width: 35%;
         }
@@ -91,7 +197,7 @@
         }
 
         .claim-btn {
-            background: #e9c46a;
+            background: var(--accent);
             color: #0d1b2a;
             padding: 12px 22px;
             border-radius: 6px;
@@ -101,7 +207,7 @@
             display: inline-block;
             transition: background 0.2s;
         }
-        .claim-btn:hover { background: #f5d68a; }
+        .claim-btn:hover { background: var(--accent-hover); }
 
         /* Mobile */
         @media (max-width: 600px) {
@@ -284,18 +390,18 @@
 
             </section>
 
-            <section style="max-width: 850px; margin: 40px auto; text-align: left; background: #1b263b; padding: 30px; border-radius: 15px; line-height: 1.8; border-left: 5px solid #e9c46a;">
-                <h2 style="color: #e9c46a; border-bottom: 1px solid #415a77; padding-bottom: 10px;">Ultimate Coin Master Strategy Guide (2026 Edition)</h2>
+            <section style="max-width: 850px; margin: 40px auto; text-align: left; background: var(--bg2); padding: 30px; border-radius: 15px; line-height: 1.8; border-left: 5px solid var(--accent);">
+                <h2 style="color: var(--accent); border-bottom: 1px solid var(--border); padding-bottom: 10px;">Ultimate Coin Master Strategy Guide (2026 Edition)</h2>
                 <p>Welcome to <strong>Spin Rewards Hub</strong>! If you have been struggling to finish your villages or keep running out of spins, you are in the right place. To reach the top levels of Coin Master without spending real money, you need more than just daily links—you need a professional strategy.</p>
-                <h3 style="color: #e9c46a;">1. The "Big Build" Secret</h3>
+                <h3 style="color: var(--accent);">1. The "Big Build" Secret</h3>
                 <p>The biggest mistake new players make is building their village one item at a time. This makes you a target for "Revenge" attacks. <strong>The Pro Tip:</strong> Save your coins until you have enough to buy the <em>entire</em> village in one sitting. By finishing a village instantly, you leave nothing for other players to destroy while you are offline.</p>
-                <h3 style="color: #e9c46a;">2. Managing Your Spin Multiplier</h3>
+                <h3 style="color: var(--accent);">2. Managing Your Spin Multiplier</h3>
                 <p>Don't always use the Max Bet! You should only increase your multiplier when you are "close" to a big win. Many top players use the <strong>"5-Spin Rule"</strong>: use 1x for five spins, then switch to 3x or 5x when you feel a Raid is coming. This conserves your energy for the moments that actually pay out millions.</p>
-                <h3 style="color: #e9c46a;">3. The Power of Foxy and Tiger</h3>
+                <h3 style="color: var(--accent);">3. The Power of Foxy and Tiger</h3>
                 <p>In 2026, pets are more important than ever. <strong>Foxy</strong> is your best friend for Raids, giving you extra coins for every dig. <strong>Tiger</strong> is best for Attacks. Make sure you only "Feed" your pets when you have a large stack of spins (at least 100+) to maximize the 4-hour boost window.</p>
-                <h3 style="color: #e9c46a;">4. Completing Card Sets</h3>
+                <h3 style="color: var(--accent);">4. Completing Card Sets</h3>
                 <p>Never ignore your card collection! Completing a set often rewards you with thousands of spins—much more than any daily link can provide. Join our community groups to trade duplicate cards. Focus on <strong>Gold Cards</strong> during special "Trade Events," as these are the rarest keys to unlocking massive spin bonuses.</p>
-                <p style="background: #415a77; padding: 15px; border-radius: 8px; font-style: italic;">
+                <p style="background: var(--tip-bg); padding: 15px; border-radius: 8px; font-style: italic;">
                     <strong>Remember:</strong> We update our daily rewards table every morning at 09:00 UTC. Bookmark this page and check back daily to ensure you never miss a 50-spin link!
                 </p>
             </section>
@@ -304,37 +410,91 @@
         <a href="#" class="btn">Get Daily Spins</a>
     </div>
 
-    <section style="max-width: 850px; margin: 40px auto; text-align: left; background: #1b263b; padding: 30px; border-radius: 15px; border-top: 5px solid #e9c46a;">
-        <h2 style="color: #e9c46a;">About Spin Rewards Hub</h2>
+    <section style="max-width: 850px; margin: 40px auto; text-align: left; background: var(--bg2); padding: 30px; border-radius: 15px; border-top: 5px solid var(--accent);">
+        <h2 style="color: var(--accent);">About Spin Rewards Hub</h2>
         <p>Founded in 2026, <strong>Spin Rewards Hub</strong> was created with one simple mission: to provide the most reliable, fastest, and safest resource for mobile gamers to claim their daily rewards.</p>
         <p>As passionate gamers ourselves, we know how frustrating it is to click on broken links or visit sites filled with intrusive pop-ups. That's why we built this "Hub." We manually verify every reward link before posting it to ensure our community gets exactly what they need to keep building their villages and climbing the leaderboards.</p>
         <div style="display: flex; gap: 20px; margin-top: 20px; flex-wrap: wrap;">
-            <div style="flex: 1; min-width: 250px; background: #415a77; padding: 20px; border-radius: 10px;">
-                <h4 style="color: #e9c46a; margin-top: 0;">Our Commitment</h4>
+            <div style="flex: 1; min-width: 250px; background: var(--bg3); padding: 20px; border-radius: 10px;">
+                <h4 style="color: var(--accent); margin-top: 0;">Our Commitment</h4>
                 <p style="font-size: 0.9em; margin-bottom: 0;">We never host "hacks" or "cheats." Every link we share comes from official game developers and social media events, keeping your account 100% safe.</p>
             </div>
-            <div style="flex: 1; min-width: 250px; background: #415a77; padding: 20px; border-radius: 10px;">
-                <h4 style="color: #e9c46a; margin-top: 0;">Community First</h4>
+            <div style="flex: 1; min-width: 250px; background: var(--bg3); padding: 20px; border-radius: 10px;">
+                <h4 style="color: var(--accent); margin-top: 0;">Community First</h4>
                 <p style="font-size: 0.9em; margin-bottom: 0;">With a growing community of over 130,000 subscribers, we take our responsibility seriously. We are here to help you play smarter, not harder.</p>
             </div>
         </div>
     </section>
 
     <section style="margin: 30px auto; max-width: 600px; text-align: center;">
-        <p style="color: #e9c46a; font-weight: bold; margin-bottom: 15px;">Did these links help? Share with your friends!</p>
+        <p style="color: var(--accent); font-weight: bold; margin-bottom: 15px;">Did these links help? Share with your friends!</p>
         <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
             <a href="https://api.whatsapp.com/send?text=Hey! I found today's free spins here: https://spinrewardshub.com" target="_blank" style="background: #25D366; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em;">WhatsApp</a>
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://spinrewardshub.com" target="_blank" style="background: #1877F2; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 0.9em;">Facebook</a>
-            <button onclick="navigator.clipboard.writeText('https://spinrewardshub.com'); alert('Link copied to clipboard!');" style="background: #415a77; color: white; padding: 10px 20px; border-radius: 5px; border: none; font-weight: bold; cursor: pointer; font-size: 0.9em;">Copy Link</button>
+            <button onclick="navigator.clipboard.writeText('https://spinrewardshub.com'); alert('Link copied to clipboard!');" style="background: var(--bg3); color: var(--text); padding: 10px 20px; border-radius: 5px; border: none; font-weight: bold; cursor: pointer; font-size: 0.9em;">Copy Link</button>
         </div>
     </section>
 
-    <footer style="margin-top:50px; border-top:1px solid #444; padding-top:20px; padding-bottom: 30px;">
-        <a href="privacy.html" style="color:#e9c46a; margin-right:15px;">Privacy Policy</a>
-        <a href="contact.html" style="color:#e9c46a;">Contact Us</a>
+    <footer style="margin-top:50px; border-top:1px solid var(--footer-border); padding-top:20px; padding-bottom: 30px;">
+        <a href="privacy.html" style="color:var(--accent); margin-right:15px;">Privacy Policy</a>
+        <a href="contact.html" style="color:var(--accent);">Contact Us</a>
     </footer>
 
+    <!-- Floating Dark/Light Mode Toggle -->
+    <button id="theme-toggle" title="Toggle dark/light mode">🌙</button>
+
+    <!-- Floating Translate Button -->
+    <button id="translate-btn" title="Translate page">🌐</button>
+
+    <!-- Translate Popup Panel -->
+    <div id="translate-panel">
+        <p>🌐 Select Language</p>
+        <div id="google_translate_element"></div>
+    </div>
+
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "62d40c0995614c6f93a2871746cca36b"}'></script><!-- End Cloudflare Web Analytics -->
+
+    <!-- Google Translate -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'tl,id,th,vi,ms,pt,es,de,fr,hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        // Dark/Light toggle
+        const btn = document.getElementById('theme-toggle');
+        const body = document.body;
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            btn.textContent = '☀️';
+        }
+        btn.addEventListener('click', function() {
+            body.classList.toggle('light-mode');
+            const isLight = body.classList.contains('light-mode');
+            btn.textContent = isLight ? '☀️' : '🌙';
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+
+        // Translate panel toggle
+        const tBtn = document.getElementById('translate-btn');
+        const tPanel = document.getElementById('translate-panel');
+        tBtn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            tPanel.style.display = tPanel.style.display === 'block' ? 'none' : 'block';
+        });
+        document.addEventListener('click', function(e) {
+            if (!tPanel.contains(e.target) && e.target !== tBtn) {
+                tPanel.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
