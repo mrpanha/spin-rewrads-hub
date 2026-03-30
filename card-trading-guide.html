@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coin Master Card Trading Guide 2026 – How to Trade, Get Rare & Gold Cards | Spin Rewards Hub</title>
+  <meta name="description" content="Complete Coin Master card trading guide for 2026. Learn how to trade regular and gold cards, get rare cards fast, use Joker Cards, open the right chests, and complete sets for massive spin rewards." />
+  <meta name="keywords" content="Coin Master card trading guide, Coin Master gold cards, Coin Master rare cards, how to trade cards Coin Master 2026, Coin Master card sets rewards" />
+  <link rel="canonical" href="https://spinrewardshub.com/card-trading-guide.html" />
+  <meta property="og:title" content="Coin Master Card Trading Guide 2026 – Rare Cards, Gold Cards & Sets" />
+  <meta property="og:description" content="Everything about Coin Master card trading — regular cards, gold cards, rare cards, chests, Joker Cards, and how to complete sets for thousands of free spins." />
+  <meta property="og:url" content="https://spinrewardshub.com/card-trading-guide.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f0f1a" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:        #0f0f1a;
+      --card:      #1e1e32;
+      --card2:     #252540;
+      --border:    #2e2e50;
+      --accent:    #f5a623;
+      --text:      #e8e8f0;
+      --muted:     #8888aa;
+      --green:     #4caf82;
+      --blue:      #5b8dee;
+      --gold:      #f5c842;
+      --rare:      #a78bfa;
+      --epic:      #3b82f6;
+      --legendary: #f59e0b;
+      --radius:    12px;
+    }
+
+    /* ── LIGHT MODE ── */
+    body.light-mode {
+      --bg: #f0f4f8; --card: #ffffff; --card2: #edf2fa;
+      --border: #c0cce0; --accent: #c9852a; --green: #2e8a5c;
+      --blue: #3a6bc4; --gold: #c9952a; --rare: #7c3aed;
+      --text: #1a1a30; --muted: #5a5a7a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg); color: var(--text);
+      font-size: 15px; line-height: 1.7;
+      transition: background .3s, color .3s;
+    }
+
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+
+    /* ── FLOATING BUTTONS ── */
+    .fab {
+      position: fixed; left: 18px; z-index: 9999;
+      width: 50px; height: 50px; border-radius: 50%; border: none;
+      font-size: 1.4em; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.4);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .18s; -webkit-tap-highlight-color: transparent;
+    }
+    .fab:active { transform: scale(.93); }
+    #theme-toggle { bottom: 24px; background: var(--accent); color: #0d0d1a; }
+    #translate-btn { bottom: 84px; background: var(--card2); color: var(--text); border: 1px solid var(--border); }
+
+    #translate-panel {
+      position: fixed; bottom: 144px; left: 14px; z-index: 9998;
+      background: var(--card); border: 2px solid var(--border);
+      border-radius: 14px; padding: 14px 16px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.45);
+      display: none; width: 230px; text-align: center;
+    }
+    #translate-panel p { margin: 0 0 10px; font-size: 13px; color: var(--muted); font-weight: 700; }
+    #lang-select {
+      width: 100%; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--bg);
+      color: var(--text); font-size: 14px; cursor: pointer; outline: none;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-bottom: 2px solid var(--accent);
+      padding: 14px 20px; display: flex; align-items: center; gap: 14px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    header a { text-decoration: none; color: inherit; }
+    .logo { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; color: var(--accent); letter-spacing: .5px; white-space: nowrap; }
+    .logo span { color: #fff; }
+    nav { margin-left: auto; display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+    nav a { color: var(--muted); text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, #1a1a2e, #0f1923 60%);
+      padding: 44px 20px 34px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(245,166,35,.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 { font-family: 'Rajdhani', sans-serif; font-size: clamp(24px,5vw,44px); font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { color: var(--muted); max-width: 640px; margin: 0 auto 20px; }
+    .badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .badge { display: inline-flex; align-items: center; gap: 5px; padding: 5px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; }
+    .badge-gold  { background: rgba(245,166,35,.13); border: 1px solid var(--accent); color: var(--accent); }
+    .badge-green { background: rgba(76,175,130,.13); border: 1px solid var(--green);  color: var(--green); }
+    .badge-purple{ background: rgba(167,139,250,.13); border: 1px solid var(--rare);   color: var(--rare); }
+
+    /* ── CONTAINER ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 0 16px; }
+
+    /* ── AD SLOT ── */
+    .ad-slot {
+      background: var(--card2); border: 1px dashed var(--border); border-radius: var(--radius);
+      text-align: center; padding: 18px; margin: 24px auto; max-width: 728px;
+      color: var(--muted); display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4px;
+    }
+    .ad-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── TOC ── */
+    .toc { background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--accent); border-radius: var(--radius); padding: 22px 26px; margin: 28px 0 0; }
+    .toc h3 { font-family: 'Rajdhani', sans-serif; font-size: 16px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .8px; margin-bottom: 14px; }
+    .toc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 8px; }
+    .toc-grid a { display: flex; align-items: center; gap: 8px; padding: 9px 14px; background: var(--card2); border: 1px solid var(--border); border-radius: 8px; color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 700; transition: all .2s; }
+    .toc-grid a:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── SECTION ── */
+    .section { margin: 36px 0; }
+    .section-title { font-family: 'Rajdhani', sans-serif; font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+    .section-title span { color: var(--accent); }
+
+    /* ── GUIDE CARD ── */
+    .guide-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 18px; }
+    .guide-card h3 { font-size: 16px; font-weight: 800; color: var(--accent); margin: 22px 0 9px; }
+    .guide-card h3:first-child { margin-top: 0; }
+    .guide-card p { color: var(--muted); line-height: 1.75; margin-bottom: 12px; }
+    .guide-card p:last-child { margin-bottom: 0; }
+    .guide-card strong { color: var(--text); }
+    .guide-card ol, .guide-card ul { padding-left: 20px; color: var(--muted); }
+    .guide-card ol li, .guide-card ul li { margin-bottom: 7px; line-height: 1.75; }
+
+    /* ── TIP / WARN BOXES ── */
+    .tip-box  { background: rgba(245,166,35,.07); border: 1px solid rgba(245,166,35,.25); border-radius: 8px; padding: 14px 18px; margin: 14px 0; }
+    .tip-box p { color: var(--text); margin: 0; line-height: 1.7; }
+    .warn-box { background: rgba(232,69,69,.07); border: 1px solid rgba(232,69,69,.3); border-radius: 8px; padding: 14px 18px; margin: 14px 0; }
+    .warn-box p { color: #f08080; margin: 0; line-height: 1.7; }
+    .good-box  { background: rgba(76,175,130,.07); border: 1px solid rgba(76,175,130,.3); border-radius: 8px; padding: 14px 18px; margin: 14px 0; }
+    .good-box p { color: var(--green); margin: 0; line-height: 1.7; }
+
+    /* ── RARITY CARDS ── */
+    .rarity-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
+    .rarity-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 16px; text-align: center; }
+    .rarity-stars { font-size: 20px; margin-bottom: 8px; }
+    .rarity-card h4 { font-family: 'Rajdhani', sans-serif; font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+    .rarity-card p { color: var(--muted); font-size: 13px; line-height: 1.6; }
+    .r-common   { border-top: 3px solid #aaa;          } .r-common h4   { color: #aaa; }
+    .r-uncommon { border-top: 3px solid var(--green);   } .r-uncommon h4 { color: var(--green); }
+    .r-rare     { border-top: 3px solid var(--rare);    } .r-rare h4     { color: var(--rare); }
+    .r-epic     { border-top: 3px solid var(--epic);    } .r-epic h4     { color: var(--epic); }
+    .r-legendary{ border-top: 3px solid var(--legendary);} .r-legendary h4 { color: var(--legendary); }
+    .r-gold     { border-top: 3px solid var(--gold); background: rgba(245,200,66,.05); } .r-gold h4 { color: var(--gold); }
+
+    /* ── CHEST CARDS ── */
+    .chest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+    .chest-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 20px; }
+    .chest-icon { font-size: 40px; margin-bottom: 10px; }
+    .chest-card h3 { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+    .chest-card p { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 10px; }
+    .chest-stat { display: flex; justify-content: space-between; background: var(--card2); border-radius: 7px; padding: 7px 12px; font-size: 13px; margin-bottom: 6px; }
+    .chest-stat:last-child { margin-bottom: 0; }
+    .cs-label { color: var(--muted); font-weight: 600; }
+    .cs-value { font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 14px; }
+    .chest-wooden h3 { color: #c8a270; } .chest-wooden { border-top: 3px solid #c8a270; }
+    .chest-golden h3 { color: var(--gold); } .chest-golden { border-top: 3px solid var(--gold); }
+    .chest-magical h3 { color: var(--rare); } .chest-magical { border-top: 3px solid var(--rare); }
+
+    /* ── STEP CARDS ── */
+    .steps { display: flex; flex-direction: column; gap: 14px; }
+    .step-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px 20px; display: flex; gap: 16px; align-items: flex-start; }
+    .step-num { background: var(--accent); color: #0d0d1a; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 18px; min-width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-body h4 { font-size: 15px; font-weight: 800; color: #fff; margin-bottom: 5px; }
+    .step-body p { color: var(--muted); font-size: 14px; margin: 0; line-height: 1.7; }
+    .step-body strong { color: var(--text); }
+
+    /* ── TABLE ── */
+    .table-wrap { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    thead tr { background: linear-gradient(90deg,#1a1a2e,#252545); border-bottom: 2px solid var(--accent); }
+    th { padding: 13px 16px; text-align: left; font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 14px; }
+    tr:last-child td { border-bottom: none; }
+    tbody tr { transition: background .15s; }
+    tbody tr:hover { background: rgba(245,166,35,.04); }
+    .td-name { font-weight: 700; color: var(--text); }
+    .td-reward { font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; color: var(--green); }
+    .td-note { color: var(--muted); font-size: 13px; }
+
+    /* ── TIPS GRID ── */
+    .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+    .tip-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 20px; position: relative; }
+    .tip-card-num { position: absolute; top: -12px; left: 18px; background: var(--accent); color: #0d0d1a; font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 13px; padding: 2px 12px; border-radius: 20px; }
+    .tip-card h3 { font-size: 15px; font-weight: 800; color: #fff; margin-bottom: 8px; }
+    .tip-card p { color: var(--muted); font-size: 14px; line-height: 1.7; }
+    .tip-card strong { color: var(--text); }
+
+    /* ── FAQ ── */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 800; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-q::after { content: '+'; color: var(--accent); font-size: 20px; flex-shrink: 0; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-a { color: var(--muted); margin-top: 8px; display: none; line-height: 1.75; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CTA ── */
+    .cta-strip { background: linear-gradient(135deg,#1a1a2e,#252545); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; text-align: center; margin: 32px 0; }
+    .cta-strip h2 { font-family: 'Rajdhani', sans-serif; font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .cta-strip h2 span { color: var(--accent); }
+    .cta-strip p { color: var(--muted); margin-bottom: 20px; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0d0d1a; padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 15px; transition: background .2s, transform .15s; }
+    .cta-btn:hover { background: #ffc14d; transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: #0a0a14; border-top: 1px solid var(--border); padding: 28px 20px 32px; text-align: center; color: var(--muted); font-size: 13px; margin-top: 48px; }
+    footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 12px; }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .rarity-grid { grid-template-columns: repeat(2, 1fr); }
+      .chest-grid  { grid-template-columns: 1fr; }
+      .toc-grid    { grid-template-columns: 1fr 1fr; }
+      nav a { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo">Spin<span>Rewards</span>Hub</a>
+  <nav>
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Villages</a>
+    <a href="/pets-guide.html">🐾 Pets</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/card-trading-guide.html" class="active">🃏 Cards</a>
+    <a href="/contact.html">✉️ Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>🃏 Coin Master <span>Card Trading Guide</span> 2026</h1>
+  <p>Everything you need to know about collecting, trading, and completing card sets in Coin Master — including how to get rare cards, Gold Cards, Joker Cards, and earn thousands of free spins from completed sets.</p>
+  <div class="badges">
+    <span class="badge badge-gold">📅 Updated 2026</span>
+    <span class="badge badge-purple">✨ Gold Cards Explained</span>
+    <span class="badge badge-green">🎰 Thousands of Spins From Sets</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- TOP AD -->
+  <div class="ad-slot" style="min-height:90px;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">728 × 90 Ad Banner</span>
+  </div>
+
+  <!-- INTRO -->
+  <div class="section">
+    <div class="guide-card">
+      <h3>Why Card Sets Are More Valuable Than You Think</h3>
+      <p>Most Coin Master players focus entirely on spins and villages — but <strong>completing card sets is one of the most powerful progression systems in the game</strong>. A single completed card set can reward you with thousands of free spins, massive coin bonuses, and even unlock new pets like Tiger and Rhino.</p>
+      <p>The challenge is that every set contains at least one <strong>rare or gold card</strong> that you simply cannot get from normal gameplay luck alone. You need a smart trading strategy, the right chest buying habits, and knowledge of when and how to trade — especially for Gold Cards which can only be traded during special events.</p>
+      <p>This guide covers everything: card rarity, chest types, how to trade, how to get Gold Cards, Joker Cards, and the pro tips that experienced players use to complete sets far faster than beginners.</p>
+      <div class="tip-box">
+        <p>💡 <strong>Key Insight:</strong> The spin rewards from completing card sets can easily dwarf everything you earn from daily links combined. Prioritizing card collection is one of the highest-return investments in Coin Master.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>📋 What's in This Guide</h3>
+    <div class="toc-grid">
+      <a href="#rarity">🌟 Card Rarities</a>
+      <a href="#how-to-get">📦 How to Get Cards</a>
+      <a href="#chests">🎁 Chest Types Guide</a>
+      <a href="#how-to-trade">🔄 How to Trade Cards</a>
+      <a href="#gold-cards">✨ Gold Card Trading</a>
+      <a href="#joker">🃏 Joker Cards</a>
+      <a href="#card-for-chest">♻️ Cards for Chests</a>
+      <a href="#set-rewards">🎰 Set Completion Rewards</a>
+      <a href="#boom-villages">💥 Boom Villages & Cards</a>
+      <a href="#events">📅 Best Events for Cards</a>
+      <a href="#pro-tips">💡 Pro Tips</a>
+      <a href="#faq">❓ FAQ</a>
+    </div>
+  </div>
+
+  <!-- CARD RARITIES -->
+  <div class="section" id="rarity">
+    <div class="section-title">🌟 Card <span>Rarity</span> Explained</div>
+    <div class="guide-card" style="margin-bottom:18px;">
+      <p>Every card in Coin Master has a <strong>star rating from 1 to 5</strong> that determines how rare it is. Higher-star cards are harder to find, but reward more spins when the set is completed. Gold Cards are a special category above 5-star cards.</p>
+    </div>
+    <div class="rarity-grid">
+      <div class="rarity-card r-common">
+        <div class="rarity-stars">⭐</div>
+        <h4>1-Star Common</h4>
+        <p>Most common cards. Found frequently in all chest types. Easy to get duplicates of.</p>
+      </div>
+      <div class="rarity-card r-uncommon">
+        <div class="rarity-stars">⭐⭐</div>
+        <h4>2-Star Uncommon</h4>
+        <p>Slightly harder to find. Still obtainable from Wooden Chests with some patience.</p>
+      </div>
+      <div class="rarity-card r-rare">
+        <div class="rarity-stars">⭐⭐⭐</div>
+        <h4>3-Star Rare</h4>
+        <p>Noticeably harder to find. Best obtained from Golden or Magical Chests at Boom Villages.</p>
+      </div>
+      <div class="rarity-card r-epic">
+        <div class="rarity-stars">⭐⭐⭐⭐</div>
+        <h4>4-Star Epic</h4>
+        <p>Very rare. Requires Magical Chests and/or trading. Often the bottleneck in completing sets.</p>
+      </div>
+      <div class="rarity-card r-legendary">
+        <div class="rarity-stars">⭐⭐⭐⭐⭐</div>
+        <h4>5-Star Legendary</h4>
+        <p>Extremely rare. Usually needs Magical Chests at Boom Villages during Card Boom event, or trading.</p>
+      </div>
+      <div class="rarity-card r-gold">
+        <div class="rarity-stars">🌟</div>
+        <h4>Gold Cards</h4>
+        <p>The rarest cards in the game. Identified by their yellow glow. <strong>Can only be traded during special Gold Card Trade events.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW TO GET CARDS -->
+  <div class="section" id="how-to-get">
+    <div class="section-title">📦 How to <span>Get Cards</span></div>
+    <div class="guide-card">
+      <h3>🎁 Open Chests</h3>
+      <p>The primary way to get cards. Every chest contains a random selection of cards based on your current village level. Higher-tier chests (Golden, Magical) give more cards and better chances at rare ones. See the <a href="#chests" style="color:var(--accent);">Chest Guide</a> below for a full breakdown.</p>
+
+      <h3>⚔️ Raids & Attacks</h3>
+      <p>Occasionally, landing on a raid or attack in the slot machine rewards you with a chest in addition to coins. These chests contain cards that get added to your collection automatically.</p>
+
+      <h3>🏘️ Complete a Village</h3>
+      <p>Every time you fully build and complete a village, you receive a <strong>free chest</strong> as a reward. The chest tier improves as you reach higher village levels, giving better card drops the further you progress.</p>
+
+      <h3>🔄 Trade with Friends</h3>
+      <p>If you have duplicate cards, you can send them to Facebook friends who need them — and request cards you're missing in return. This is the fastest way to complete the lower-star portion of your sets. See <a href="#how-to-trade" style="color:var(--accent);">How to Trade</a> below.</p>
+
+      <h3>👥 Request from Your Team</h3>
+      <p>If you're in a Coin Master Team, you can <strong>request one card per day</strong> from your team members. Go to the Team menu → tap the card request button → choose which card you need. Team members can then donate a duplicate copy to you. This is a great way to plug gaps in your sets without relying on chest luck.</p>
+
+      <h3>🏆 Events & Tournaments</h3>
+      <p>Many Coin Master events (Card Boom, Viking Quest, tournament rewards) give chests or direct card rewards as prizes. Topping a tournament leaderboard can reward <strong>Joker Cards</strong> — the most powerful card-getting tool in the game (see <a href="#joker" style="color:var(--accent);">Joker Cards</a>).</p>
+    </div>
+  </div>
+
+  <!-- CHESTS -->
+  <div class="section" id="chests">
+    <div class="section-title">🎁 Chest Types — <span>Which Should You Buy?</span></div>
+    <div class="chest-grid">
+      <div class="chest-card chest-wooden">
+        <div class="chest-icon">🪵</div>
+        <h3>Wooden Chest</h3>
+        <p>The cheapest chest. Best for completing low-star (1–2 star) card sets. Not ideal for rare card hunting.</p>
+        <div class="chest-stat"><span class="cs-label">Cards per chest</span><span class="cs-value" style="color:#c8a270;">2 cards</span></div>
+        <div class="chest-stat"><span class="cs-label">Cost (approx.)</span><span class="cs-value">~7.7M coins</span></div>
+        <div class="chest-stat"><span class="cs-label">Best for</span><span class="cs-value">1–2 ⭐ cards</span></div>
+        <div class="chest-stat"><span class="cs-label">Unlocks at</span><span class="cs-value">Village 10+</span></div>
+      </div>
+      <div class="chest-card chest-golden">
+        <div class="chest-icon">💛</div>
+        <h3>Golden Chest</h3>
+        <p>A solid mid-tier option. Better rare card drop rates than Wooden. Great value for mid-game players hunting 3-star cards.</p>
+        <div class="chest-stat"><span class="cs-label">Cards per chest</span><span class="cs-value" style="color:var(--gold);">4 cards</span></div>
+        <div class="chest-stat"><span class="cs-label">Cost (approx.)</span><span class="cs-value">~23M coins</span></div>
+        <div class="chest-stat"><span class="cs-label">Best for</span><span class="cs-value">2–3 ⭐ cards</span></div>
+        <div class="chest-stat"><span class="cs-label">Unlocks at</span><span class="cs-value">Village 10+</span></div>
+      </div>
+      <div class="chest-card chest-magical">
+        <div class="chest-icon">🪄</div>
+        <h3>Magical Chest</h3>
+        <p>The premium chest. Highest rare and gold card drop rates. Essential for completing 4–5 star sets and hunting Gold Cards.</p>
+        <div class="chest-stat"><span class="cs-label">Cards per chest</span><span class="cs-value" style="color:var(--rare);">8 cards</span></div>
+        <div class="chest-stat"><span class="cs-label">Cost (approx.)</span><span class="cs-value">~42M coins</span></div>
+        <div class="chest-stat"><span class="cs-label">Best for</span><span class="cs-value">4–5 ⭐ + Gold</span></div>
+        <div class="chest-stat"><span class="cs-label">Unlocks at</span><span class="cs-value">Village 10+</span></div>
+      </div>
+    </div>
+    <div class="guide-card" style="margin-top:18px;">
+      <h3>Chest Buying Strategy</h3>
+      <p>At a Boom Village, start with <strong>20 Wooden Chests</strong> to fill in common cards, then move to <strong>20 Golden Chests</strong>, and finally spend remaining coins on <strong>Magical Chests</strong> for the rare and gold card hunting. This tiered approach avoids wasting expensive Magical Chest coins on cards that cheaper chests can provide.</p>
+      <div class="tip-box">
+        <p>⏰ <strong>Best Time to Open Chests:</strong> Always wait for the <strong>Card Boom event</strong> if possible. During Card Boom, every chest contains 50% more cards — meaning you get significantly more chances at rare cards for the same coin cost. Save your chest-opening sessions for this event.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MID AD -->
+  <div class="ad-slot" style="min-height:250px;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">300 × 250 Ad Rectangle</span>
+  </div>
+
+  <!-- HOW TO TRADE -->
+  <div class="section" id="how-to-trade">
+    <div class="section-title">🔄 How to <span>Trade Cards</span> Step-by-Step</div>
+    <div class="guide-card" style="margin-bottom:18px;">
+      <p>Trading regular (non-gold) cards with friends is straightforward and can be done any time. You can only send a card if you have <strong>more than one copy</strong> of it — you can't send your last copy.</p>
+    </div>
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Open Your Card Collection</h4>
+          <p>Tap the <strong>Card icon</strong> at the bottom left corner of the main game screen to open your card collections.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Find the Card You Want to Send</h4>
+          <p>Browse through your sets and find a card where you have <strong>2 or more copies</strong>. Duplicate cards will show a number badge indicating how many you own.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Tap the Card → Tap Send</h4>
+          <p>Tap on the card you want to trade, then tap the <strong>Send</strong> button that appears. This opens your friends list.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Choose Your Friend</h4>
+          <p>Select the friend you want to send the card to. They will receive it immediately in their collection. <strong>Note:</strong> You need a Facebook-connected account to trade with friends.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">5</div>
+        <div class="step-body">
+          <h4>Request Cards Back</h4>
+          <p>After sending, message your friend (via Facebook or in-game) to send you a card you're missing in return. Good trading is always <strong>a fair exchange</strong> — one card for one card of equal rarity.</p>
+        </div>
+      </div>
+    </div>
+    <div class="warn-box" style="margin-top:18px;">
+      <p>⚠️ <strong>Trading Safety:</strong> Never send a rare (3-star+) card first to someone you don't personally know. Scammers will take your card and not send one back. Only trade rare cards with trusted friends, or use a community "Verified Trader" in Facebook groups as a middleman.</p>
+    </div>
+  </div>
+
+  <!-- GOLD CARDS -->
+  <div class="section" id="gold-cards">
+    <div class="section-title">✨ <span>Gold Card</span> Trading Guide</div>
+    <div class="guide-card">
+      <h3>What Are Gold Cards?</h3>
+      <p>Gold Cards are the rarest cards in Coin Master — identified by their <strong>bright yellow glow</strong>. They belong to the same card sets as regular cards but are a special rare variant of those cards. Completing a card set that contains Gold Cards gives significantly better rewards than regular sets.</p>
+      <p>When you tap a Gold Card in your collection, you'll see the message: <em>"This card is golden. It can't be sent to friends."</em> This is because Gold Cards have special trading rules.</p>
+
+      <h3>The Gold Card Trade Event</h3>
+      <p>Gold Cards can <strong>only be traded during special Gold Card Trade events</strong>. You cannot send them to friends outside of these events. When a Gold Card Trade event is active, a notification appears in the game and the trade interface becomes available.</p>
+      <p>Each Gold Card Trade event allows <strong>two specific Gold Cards</strong> to be traded during that window. You can either offer a Gold Card you have (that someone else needs) or request one you're missing. Post your offer or request on the <strong>official Coin Master Trading Group</strong> on Facebook to find trading partners quickly.</p>
+
+      <h3>How to Get Gold Cards</h3>
+      <p>There are several ways to obtain Gold Cards:</p>
+      <ul>
+        <li>Opening <strong>Magical Chests</strong> at <strong>Boom Villages</strong> — the highest chance of Gold Card drops</li>
+        <li>Participating in the <strong>Viking Quest</strong> event, which can reward Gold Cards from specific stages</li>
+        <li>Winning top positions in <strong>Tournaments</strong> which sometimes reward Gold Cards directly</li>
+        <li>Trading with friends during a <strong>Gold Card Trade event</strong></li>
+      </ul>
+
+      <div class="tip-box">
+        <p>🌟 <strong>Gold Card Strategy:</strong> Don't rush through Boom Villages. When you reach a confirmed Boom Village (check our <a href="/village-list.html" style="color:var(--accent);">Village List</a>), open as many Magical Chests as you can afford. The improved Gold Card drop rate at Boom Villages is your best opportunity outside of trade events.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- JOKER CARDS -->
+  <div class="section" id="joker">
+    <div class="section-title">🃏 <span>Joker Cards</span> — Your Most Powerful Tool</div>
+    <div class="guide-card">
+      <h3>What Is a Joker Card?</h3>
+      <p>A <strong>Joker Card</strong> is a wildcard that lets you choose <strong>any single missing card</strong> and instantly add it to your collection — including rare, epic, and legendary cards. It is the single most valuable card-collection tool in the game.</p>
+
+      <h3>How to Get Joker Cards</h3>
+      <ul>
+        <li><strong>Tournament leaderboards</strong> — ranking highly in Coin Master tournaments can reward Joker Cards</li>
+        <li><strong>Special events</strong> — certain limited-time events include Joker Cards as milestone rewards</li>
+        <li><strong>Golden Pass</strong> — the paid seasonal pass sometimes includes Joker Cards at specific tiers</li>
+        <li><strong>Viking Quest</strong> — specific stages can reward a Joker Card</li>
+      </ul>
+
+      <h3>When to Use a Joker Card</h3>
+      <p>Never waste a Joker Card on a card you could reasonably get from chests or trading. <strong>Save Joker Cards for the hardest-to-find cards</strong> — specifically 4 or 5-star legendaries that are blocking you from completing a high-reward set. Using a Joker Card to complete a set that rewards thousands of spins gives you enormous value.</p>
+      <div class="tip-box">
+        <p>♟️ <strong>Joker Card Rule:</strong> Before using a Joker Card, ask yourself — can I get this card by trading or from a chest within the next week? If yes, wait. If the card is a rare Gold variant or an ultra-rare legendary with no trade event upcoming, use the Joker Card.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARDS FOR CHESTS -->
+  <div class="section" id="card-for-chest">
+    <div class="section-title">♻️ <span>Cards for Chests</span> — Turn Duplicates into Value</div>
+    <div class="guide-card">
+      <h3>What Is the Cards for Chests Feature?</h3>
+      <p>Coin Master has a built-in system to convert your <strong>duplicate cards into chests</strong>. Instead of hoarding useless duplicates, you can exchange them for Wooden, Golden, or Magical Chests that give you new cards, spins, coins, and Pet XP.</p>
+
+      <h3>How to Exchange Cards for Chests</h3>
+      <ol>
+        <li>Open the <strong>Cards menu</strong> (tap Main Menu → Cards)</li>
+        <li>In the top-left corner of the Cards menu, tap the button with the <strong>star and chest icon</strong></li>
+        <li>The "Cards for Chests" pop-up opens — choose your desired chest type</li>
+        <li>Tap <strong>"Select Cards for Me"</strong> to auto-select duplicates, or manually choose which duplicates to exchange</li>
+        <li>Confirm the exchange and your new chest rewards are added immediately</li>
+      </ol>
+      <div class="tip-box">
+        <p>💡 <strong>Best Time:</strong> Do your Cards for Chests exchange <em>during the Card Boom event</em> — the chests you receive contain 50% more cards, maximising the return on your duplicates.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SET REWARDS -->
+  <div class="section" id="set-rewards">
+    <div class="section-title">🎰 Card Set Completion <span>Rewards</span></div>
+    <div class="guide-card" style="margin-bottom:18px;">
+      <p>The rewards for completing a card set scale with the <strong>average star rating</strong> of the cards in that set. The higher the rarity, the bigger the reward. Here's a general breakdown of what to expect:</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Set Type</th>
+            <th>Approx. Spin Reward</th>
+            <th>Other Rewards</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="td-name">1–2 ⭐ Common Set</td><td class="td-reward">200–500 spins</td><td class="td-note">Coins, Pet XP</td><td class="td-note">Easy to complete early game</td></tr>
+          <tr><td class="td-name">3 ⭐ Rare Set</td><td class="td-reward">500–1,500 spins</td><td class="td-note">Coins, Pet XP</td><td class="td-note">Requires trading for rare cards</td></tr>
+          <tr><td class="td-name">4 ⭐ Epic Set</td><td class="td-reward">1,500–3,000 spins</td><td class="td-note">Coins, Pet XP</td><td class="td-note">Magical Chests + trading needed</td></tr>
+          <tr><td class="td-name">5 ⭐ Legendary Set</td><td class="td-reward">3,000–10,000 spins</td><td class="td-note">Coins, Pet XP</td><td class="td-note">Very high value — prioritize these</td></tr>
+          <tr><td class="td-name">Gold Card Set</td><td class="td-reward">10,000–50,000+ spins</td><td class="td-note">Coins, Pet XP, Pets</td><td class="td-note">Best rewards in the game</td></tr>
+          <tr><td class="td-name">Pet Unlock Set (Beasts/Creatures)</td><td class="td-reward">Unlocks Tiger / Rhino</td><td class="td-note">Pet egg + spins</td><td class="td-note">Complete these as early as possible</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="good-box" style="margin-top:16px;">
+      <p>🎰 <strong>Big Picture:</strong> A serious Coin Master player who completes multiple high-star card sets can earn <strong>tens of thousands of free spins</strong> purely from set rewards — far more than any daily link program. Card collection is not a side activity; it's a core progression system.</p>
+    </div>
+  </div>
+
+  <!-- BOOM VILLAGES -->
+  <div class="section" id="boom-villages">
+    <div class="section-title">💥 <span>Boom Villages</span> & Card Drops</div>
+    <div class="guide-card">
+      <h3>Why Boom Villages Matter for Card Hunting</h3>
+      <p>Boom Villages are specific village levels where the game's <strong>rare and gold card drop rate from chests is significantly higher</strong> than normal villages. When you reach a Boom Village, it's the best possible time to open chests and hunt for the rare cards blocking your set completions.</p>
+      <p>Some Boom Villages are also <strong>Big Boom Villages</strong> — these have even higher drop rates and are the most valuable card-hunting stops in the game. Check our full <a href="/village-list.html" style="color:var(--accent);">Village List</a> to see all confirmed Boom and Big Boom Village levels marked with 💥 and ⚡.</p>
+
+      <h3>The Boom Village Chest Strategy</h3>
+      <p>When you arrive at a Boom Village, follow this chest-buying order:</p>
+      <ol>
+        <li>First buy <strong>20 Wooden Chests</strong> — fills in common cards cheaply</li>
+        <li>Then buy <strong>20 Golden Chests</strong> — targets the 2–3 star cards</li>
+        <li>Finally, spend remaining coins on <strong>Magical Chests</strong> — maximum rare and gold card chances</li>
+      </ol>
+      <div class="tip-box">
+        <p>🏆 <strong>Stack Events:</strong> If a Card Boom event happens while you're at a Boom Village, this is the single best combination in the game for card hunting. Open as many Magical Chests as you can — the increased village drop rate AND the Card Boom bonus stack together.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BEST EVENTS -->
+  <div class="section" id="events">
+    <div class="section-title">📅 Best <span>Events</span> for Card Collecting</div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-card-num">Card Boom</div>
+        <h3>📦 Card Boom Event</h3>
+        <p>Every chest you open gives <strong>50% more cards</strong>. This is the single best event for chest opening. Save your coins and open chests only during Card Boom whenever possible.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-num">Gold Trade</div>
+        <h3>✨ Gold Card Trade Event</h3>
+        <p>The only time you can trade Gold Cards with friends. Two specific Gold Cards become tradeable per event. Post in Facebook groups to find trade partners before the event window closes.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-num">Viking Quest</div>
+        <h3>⚔️ Viking Quest</h3>
+        <p>Completing Viking Quest stages can reward <strong>Gold Cards and Joker Cards</strong>. Always participate — it's one of the few ways to get Gold Cards outside of chest luck and trade events.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-num">Seasonal</div>
+        <h3>🎄 Seasonal & Sticker Events</h3>
+        <p>Limited-time card sets appear during seasonal events (Christmas, Halloween, etc.). These sets have separate Albums — completing them unlocks <strong>massive bonus rewards including 50,000+ spins</strong>. Never miss a seasonal event.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRO TIPS -->
+  <div class="section" id="pro-tips">
+    <div class="section-title">💡 <span>Pro Tips</span> for Master Card Collectors</div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-card-num">Tip 1</div>
+        <h3>Never Trade Rare Cards First to Strangers</h3>
+        <p>Always trade with friends you know personally, or use a community-verified middleman in Facebook trading groups. Send your card <em>only after</em> confirming the other person has what you need.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-num">Tip 2</div>
+        <h3>Join Facebook Trading Groups</h3>
+        <p>Search <strong>"Coin Master Card Trading"</strong> on Facebook. These large communities have thousands of players exchanging duplicates daily — your fastest route to completing stubborn sets.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-num">Tip 3</div>
+        <h3>Don't Open Chests Outside Card Boom</h3>
+        <p>If you're not at a Boom Village and Card Boom isn't active, wait. The difference in card output is massive — 50% more cards per chest is too good to miss by being impatient.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-num">Tip 4</div>
+        <h3>Prioritize Pet Unlock Card Sets</h3>
+        <p>The Beasts set (unlocks Tiger) and Creatures set (unlocks Rhino) should be your <strong>first priority</strong> as a new player. Both pets give enormous gameplay advantages worth more than any individual card reward.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-num">Tip 5</div>
+        <h3>Request Team Cards Daily</h3>
+        <p>You get <strong>one free card request per day</strong> from your team. Never skip this. Over a month, that's 30 free cards — often exactly the ones you're missing to complete a set.</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-card-num">Tip 6</div>
+        <h3>Save Joker Cards for 5-Star Bottlenecks</h3>
+        <p>Joker Cards are rare. Only spend them when a <strong>5-star legendary card</strong> is the final blocker between you and completing a high-reward set worth thousands of spins.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section" id="faq">
+    <div class="section-title">❓ <span>FAQ</span> – Coin Master Card Trading</div>
+    <div class="guide-card">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I trade cards without a Facebook account?</div>
+        <div class="faq-a">No. Card trading in Coin Master requires your account to be connected to Facebook. Without Facebook, you can't see your friends' collections, send cards, or receive them. You can still collect cards from chests, raids, and villages — but the friend-trading system is completely Facebook-dependent.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Can I trade Gold Cards any time?</div>
+        <div class="faq-a">No. Gold Cards can <strong>only be traded during special Gold Card Trade events</strong>. Outside of these events, the Send button is disabled for Gold Cards and the game will tell you "This card is golden. It can't be sent to friends." Watch for Gold Trade event notifications in-game — these events are frequent but have limited windows.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What happens when I complete a card set?</div>
+        <div class="faq-a">You receive the full set reward — which includes free spins, coins, and sometimes Pet XP or pet unlocks. The reward amount depends on the average star rating of the set. After collecting, the completed set is marked in your collection and contributes to your Album progress, which has additional milestone rewards on top.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Why can't I send a card to a friend?</div>
+        <div class="faq-a">There are two common reasons: (1) You only have <strong>one copy</strong> of that card — you need at least 2 to send one. (2) The card is a Gold Card and no Gold Card Trade event is currently active. Make sure you have duplicates before attempting to trade, and check the event calendar for upcoming Gold Trade events.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Which chest gives the best chance of Gold Cards?</div>
+        <div class="faq-a">The <strong>Magical Chest</strong> gives the highest chance of rare and Gold Card drops. For even better results, open Magical Chests while at a confirmed <strong>Boom Village</strong> (see our <a href="/village-list.html" style="color:var(--accent);">Village List</a>) during a <strong>Card Boom event</strong>. Combining all three factors — Magical Chest + Boom Village + Card Boom event — gives you the maximum possible Gold Card drop rate.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How many cards are in each set?</div>
+        <div class="faq-a">Most card sets contain <strong>9 cards</strong>. Some older or simpler sets contain fewer. Each card in a set is a different star rarity, ranging from 1-star commons up to 5-star legendaries or Gold Cards. You need all cards in a set to claim the completion reward.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Are seasonal cards the same as regular cards?</div>
+        <div class="faq-a">No. Seasonal cards are a separate collection from regular cards and are only available during specific limited-time events (like Christmas or Halloween). They have their own Albums and separate rewards. When a seasonal event ends, those cards are no longer obtainable until the event returns. Seasonal card set completions can reward some of the largest spin prizes in the entire game.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <h2>Fuel Your Card Hunt with <span>Free Spins!</span></h2>
+    <p>More spins = more raids = more chests = more cards. Claim today's free daily links — updated every morning at 09:00 UTC.</p>
+    <a href="/" class="cta-btn">🎁 Get Today's Free Spins</a>
+  </div>
+
+  <!-- BOTTOM AD -->
+  <div class="ad-slot" style="min-height:90px; margin-bottom:0;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">728 × 90 Ad Banner</span>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Village List</a>
+    <a href="/pets-guide.html">🐾 Pets Guide</a>
+    <a href="/free-spins-guide.html">💡 Free Spins Guide</a>
+    <a href="/card-trading-guide.html">🃏 Card Trading</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/contact.html">Contact Us</a>
+  </div>
+  <p>© 2026 SpinRewardsHub.com — Coin Master fan site. Not affiliated with Moon Active or Coin Master.</p>
+  <p style="margin-top:6px; font-size:11px;">Card reward values are community estimates. Actual rewards vary based on game updates and set composition.</p>
+</footer>
+
+<!-- Floating Buttons -->
+<button class="fab" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+<button class="fab" id="translate-btn" aria-label="Translate page">🌐</button>
+
+<!-- Translate Panel -->
+<div id="translate-panel" role="dialog" aria-label="Language selector">
+  <p>🌐 Select Language</p>
+  <select id="lang-select" aria-label="Choose language">
+    <option value="">🇬🇧 English</option>
+    <option value="tl">🇵🇭 Filipino</option>
+    <option value="id">🇮🇩 Bahasa Indonesia</option>
+    <option value="th">🇹🇭 Thai</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="ms">🇲🇾 Malay</option>
+    <option value="pt">🇧🇷 Português</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="hi">🇮🇳 Hindi</option>
+  </select>
+</div>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"62d40c0995614c6f93a2871746cca36b"}'></script>
+
+<!-- Google Translate -->
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'gt_hidden');
+  }
+</script>
+<div id="gt_hidden" style="display:none"></div>
+<script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
+
+  // Theme toggle
+  const themeBtn = document.getElementById('theme-toggle');
+  if (localStorage.getItem('theme') === 'light') { document.body.classList.add('light-mode'); themeBtn.textContent = '☀️'; }
+  themeBtn.addEventListener('click', function () {
+    document.body.classList.toggle('light-mode');
+    const light = document.body.classList.contains('light-mode');
+    themeBtn.textContent = light ? '☀️' : '🌙';
+    localStorage.setItem('theme', light ? 'light' : 'dark');
+  });
+
+  // Translate panel
+  const tBtn = document.getElementById('translate-btn');
+  const tPanel = document.getElementById('translate-panel');
+  tBtn.addEventListener('click', function (e) { e.stopPropagation(); tPanel.style.display = tPanel.style.display === 'block' ? 'none' : 'block'; });
+  document.addEventListener('click', function (e) { if (!tPanel.contains(e.target) && e.target !== tBtn) tPanel.style.display = 'none'; });
+
+  // Language switcher
+  (function () {
+    if (location.search.indexOf('lang=en') !== -1) {
+      var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      document.cookie = 'googtrans=; ' + exp;
+      document.cookie = 'googtrans=; ' + exp + '; domain=' + location.hostname;
+      document.cookie = 'googtrans=; ' + exp + '; domain=.' + location.hostname;
+      history.replaceState(null, '', location.pathname);
+    }
+    var m = document.cookie.match(/googtrans=\/en\/([a-z]{2,})/);
+    if (m) { var s = document.getElementById('lang-select'); if (s) s.value = m[1]; }
+  })();
+  document.getElementById('lang-select').addEventListener('change', function () {
+    var lang = this.value, domain = location.hostname;
+    if (!lang) {
+      ['','domain=' + domain,'domain=.' + domain].forEach(function(d){ document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;' + (d ? ' ' + d : ''); });
+      location.href = location.pathname + '?lang=en'; return;
+    }
+    document.cookie = 'googtrans=/en/' + lang + '; path=/';
+    document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
+    location.reload();
+  });
+</script>
+</body>
+</html>
