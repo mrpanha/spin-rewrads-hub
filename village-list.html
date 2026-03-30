@@ -33,6 +33,14 @@
       --muted: #8888aa;
       --radius: 12px;
     }
+    /* ─── LIGHT MODE ─── */
+    body.light-mode {
+      --bg: #f0f4f8; --bg2: #ffffff; --card: #ffffff; --card2: #edf2fa;
+      --border: #c0cce0; --accent: #c9852a; --green: #2e8a5c;
+      --boom: #c0394f; --bigboom: #7b3fa0;
+      --text: #1a1a30; --muted: #5a5a7a;
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
@@ -41,6 +49,41 @@
       font-family: 'Nunito', sans-serif;
       font-size: 15px;
       line-height: 1.6;
+      transition: background .3s, color .3s;
+    }
+
+    /* ─── HIDE GOOGLE TRANSLATE BAR ─── */
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+
+    /* ─── FLOATING BUTTONS ─── */
+    .fab {
+      position: fixed; left: 18px; z-index: 9999;
+      width: 50px; height: 50px; border-radius: 50%; border: none;
+      font-size: 1.4em; cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0,0,0,.4);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .18s;
+      -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+    }
+    .fab:active { transform: scale(.93); }
+    #theme-toggle { bottom: 24px; background: var(--accent); color: #0d0d1a; }
+    #translate-btn { bottom: 84px; background: var(--card2); color: var(--text); border: 1px solid var(--border); }
+
+    /* ─── TRANSLATE PANEL ─── */
+    #translate-panel {
+      position: fixed; bottom: 144px; left: 14px; z-index: 9998;
+      background: var(--card); border: 2px solid var(--border);
+      border-radius: 14px; padding: 14px 16px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.45);
+      display: none; width: 230px; text-align: center;
+    }
+    #translate-panel p { margin: 0 0 10px; font-size: 13px; color: var(--muted); font-weight: 700; }
+    #lang-select {
+      width: 100%; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--bg);
+      color: var(--text); font-size: 14px; cursor: pointer; outline: none;
+      font-family: 'Nunito', sans-serif;
     }
 
     /* ─── HEADER ─── */
@@ -698,6 +741,94 @@
 
   // ─── INIT ────────────────────────────────────────────────────────
   renderRows();
+</script>
+
+<!-- Floating Buttons -->
+<button class="fab" id="theme-toggle" title="Toggle dark/light mode" aria-label="Toggle theme">🌙</button>
+<button class="fab" id="translate-btn" title="Translate page" aria-label="Translate page">🌐</button>
+
+<!-- Translate Panel -->
+<div id="translate-panel" role="dialog" aria-label="Language selector">
+  <p>🌐 Select Language</p>
+  <select id="lang-select" aria-label="Choose language">
+    <option value="">🇬🇧 English</option>
+    <option value="tl">🇵🇭 Filipino</option>
+    <option value="id">🇮🇩 Bahasa Indonesia</option>
+    <option value="th">🇹🇭 Thai</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="ms">🇲🇾 Malay</option>
+    <option value="pt">🇧🇷 Português</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="hi">🇮🇳 Hindi</option>
+  </select>
+</div>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"62d40c0995614c6f93a2871746cca36b"}'></script>
+
+<!-- Google Translate -->
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'gt_hidden');
+  }
+</script>
+<div id="gt_hidden" style="display:none"></div>
+<script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // ── Theme toggle ──
+  const themeBtn = document.getElementById('theme-toggle');
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', function () {
+    document.body.classList.toggle('light-mode');
+    const light = document.body.classList.contains('light-mode');
+    themeBtn.textContent = light ? '☀️' : '🌙';
+    localStorage.setItem('theme', light ? 'light' : 'dark');
+  });
+
+  // ── Translate panel toggle ──
+  const tBtn = document.getElementById('translate-btn');
+  const tPanel = document.getElementById('translate-panel');
+  tBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    tPanel.style.display = tPanel.style.display === 'block' ? 'none' : 'block';
+  });
+  document.addEventListener('click', function (e) {
+    if (!tPanel.contains(e.target) && e.target !== tBtn) tPanel.style.display = 'none';
+  });
+
+  // ── Language switcher ──
+  (function () {
+    if (location.search.indexOf('lang=en') !== -1) {
+      var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      document.cookie = 'googtrans=; ' + exp;
+      document.cookie = 'googtrans=; ' + exp + '; domain=' + location.hostname;
+      document.cookie = 'googtrans=; ' + exp + '; domain=.' + location.hostname;
+      history.replaceState(null, '', location.pathname);
+    }
+    var match = document.cookie.match(/googtrans=\/en\/([a-z]{2,})/);
+    if (match) { var sel = document.getElementById('lang-select'); if (sel) sel.value = match[1]; }
+  })();
+
+  document.getElementById('lang-select').addEventListener('change', function () {
+    var lang = this.value;
+    var domain = location.hostname;
+    if (!lang) {
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domain;
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + domain;
+      location.href = location.pathname + '?lang=en';
+      return;
+    }
+    document.cookie = 'googtrans=/en/' + lang + '; path=/';
+    document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
+    location.reload();
+  });
 </script>
 </body>
 </html>
