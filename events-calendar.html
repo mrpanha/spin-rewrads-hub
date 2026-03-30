@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coin Master Events Calendar 2026 – Every Event Explained | Spin Rewards Hub</title>
+  <meta name="description" content="Complete Coin Master events guide for 2026. Every event explained — Attack Madness, Raid Madness, Village Mania, Card Boom, Viking Quest and more. Tips on when to spin and when to save." />
+  <meta name="keywords" content="Coin Master events 2026, Coin Master events calendar, Coin Master Village Mania, Coin Master Raid Madness, Coin Master Attack Madness, Coin Master Card Boom" />
+  <link rel="canonical" href="https://spinrewardshub.com/events-calendar.html" />
+  <meta property="og:title" content="Coin Master Events Calendar 2026 – Every Event Explained" />
+  <meta property="og:description" content="Every Coin Master event explained with tips, strategies, and what to prioritize. Updated 2026." />
+  <meta property="og:url" content="https://spinrewardshub.com/events-calendar.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f0f1a" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:      #0f0f1a;
+      --card:    #1e1e32;
+      --card2:   #252540;
+      --border:  #2e2e50;
+      --accent:  #f5a623;
+      --text:    #e8e8f0;
+      --muted:   #8888aa;
+      --green:   #4caf82;
+      --blue:    #5b8dee;
+      --red:     #e84545;
+      --purple:  #a78bfa;
+      --radius:  12px;
+    }
+
+    /* ── LIGHT MODE ── */
+    body.light-mode {
+      --bg: #f0f4f8; --card: #ffffff; --card2: #edf2fa;
+      --border: #c0cce0; --accent: #c9852a; --green: #2e8a5c;
+      --blue: #3a6bc4; --red: #c03030; --purple: #7c3aed;
+      --text: #1a1a30; --muted: #5a5a7a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg); color: var(--text);
+      font-size: 15px; line-height: 1.7;
+      transition: background .3s, color .3s;
+    }
+
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+
+    /* ── FABs ── */
+    .fab {
+      position: fixed; left: 18px; z-index: 9999;
+      width: 50px; height: 50px; border-radius: 50%; border: none;
+      font-size: 1.4em; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.4);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .18s; -webkit-tap-highlight-color: transparent;
+    }
+    .fab:active { transform: scale(.93); }
+    #theme-toggle { bottom: 24px; background: var(--accent); color: #0d0d1a; }
+    #translate-btn { bottom: 84px; background: var(--card2); color: var(--text); border: 1px solid var(--border); }
+    #translate-panel {
+      position: fixed; bottom: 144px; left: 14px; z-index: 9998;
+      background: var(--card); border: 2px solid var(--border);
+      border-radius: 14px; padding: 14px 16px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.45);
+      display: none; width: 230px; text-align: center;
+    }
+    #translate-panel p { margin: 0 0 10px; font-size: 13px; color: var(--muted); font-weight: 700; }
+    #lang-select {
+      width: 100%; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--bg);
+      color: var(--text); font-size: 14px; cursor: pointer; outline: none;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-bottom: 2px solid var(--accent);
+      padding: 14px 20px; display: flex; align-items: center; gap: 14px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    header a { text-decoration: none; color: inherit; }
+    .logo { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; color: var(--accent); letter-spacing: .5px; white-space: nowrap; }
+    .logo span { color: #fff; }
+    nav { margin-left: auto; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    nav a { color: var(--muted); text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, #1a1a2e, #0f1923 60%);
+      padding: 44px 20px 34px; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(245,166,35,.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 { font-family: 'Rajdhani', sans-serif; font-size: clamp(24px,5vw,44px); font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { color: var(--muted); max-width: 640px; margin: 0 auto 20px; }
+    .badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .badge { display: inline-flex; align-items: center; gap: 5px; padding: 5px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; }
+    .badge-gold   { background: rgba(245,166,35,.13); border: 1px solid var(--accent); color: var(--accent); }
+    .badge-green  { background: rgba(76,175,130,.13); border: 1px solid var(--green);  color: var(--green); }
+    .badge-purple { background: rgba(167,139,250,.13); border: 1px solid var(--purple); color: var(--purple); }
+
+    /* ── CONTAINER ── */
+    .container { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+
+    /* ── AD SLOT ── */
+    .ad-slot {
+      background: var(--card2); border: 1px dashed var(--border); border-radius: var(--radius);
+      padding: 18px; margin: 24px auto; max-width: 728px; color: var(--muted);
+      display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4px;
+    }
+    .ad-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── SECTION ── */
+    .section { margin: 36px 0; }
+    .section-title { font-family: 'Rajdhani', sans-serif; font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 18px; padding-bottom: 10px; border-bottom: 2px solid var(--border); }
+    .section-title span { color: var(--accent); }
+
+    /* ── FILTER BAR ── */
+    .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; padding: 20px 0 4px; }
+    .f-btn {
+      padding: 8px 16px; border-radius: 8px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted);
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 12px;
+      cursor: pointer; transition: all .2s; text-transform: uppercase; letter-spacing: .4px;
+    }
+    .f-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .f-btn.active { background: var(--accent); border-color: var(--accent); color: #000; }
+
+    /* ── EVENT CARDS GRID ── */
+    .events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+
+    .event-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+      transition: transform .2s, box-shadow .2s;
+      display: flex; flex-direction: column;
+    }
+    .event-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,0,0,.28); }
+    .event-card.hidden { display: none; }
+
+    .event-header {
+      padding: 18px 20px 14px;
+      display: flex; align-items: flex-start; gap: 14px;
+    }
+    .event-emoji { font-size: 42px; line-height: 1; flex-shrink: 0; filter: drop-shadow(0 2px 6px rgba(0,0,0,.3)); }
+    .event-meta { flex: 1; }
+    .event-meta h3 { font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 6px; }
+    .event-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+    .tag {
+      display: inline-block; padding: 2px 9px; border-radius: 20px;
+      font-size: 11px; font-weight: 800; letter-spacing: .3px; text-transform: uppercase;
+    }
+    .tag-freq   { background: rgba(91,141,238,.15); border: 1px solid var(--blue);   color: var(--blue); }
+    .tag-dur    { background: rgba(76,175,130,.15);  border: 1px solid var(--green);  color: var(--green); }
+    .tag-type   { background: rgba(245,166,35,.15);  border: 1px solid var(--accent); color: var(--accent); }
+    .tag-hot    { background: rgba(232,69,69,.15);   border: 1px solid var(--red);    color: var(--red); }
+
+    .event-body { padding: 0 20px 20px; flex: 1; display: flex; flex-direction: column; }
+    .event-body p { color: var(--muted); font-size: 14px; line-height: 1.75; margin-bottom: 12px; }
+    .event-body strong { color: var(--text); }
+
+    .event-tip {
+      background: rgba(245,166,35,.07); border: 1px solid rgba(245,166,35,.2);
+      border-radius: 8px; padding: 10px 14px; margin-top: auto;
+    }
+    .event-tip p { color: var(--text); font-size: 13px; margin: 0; line-height: 1.6; }
+
+    /* ── PRIORITY TABLE ── */
+    .table-wrap { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; }
+    thead tr { background: linear-gradient(90deg,#1a1a2e,#252545); border-bottom: 2px solid var(--accent); }
+    th { padding: 13px 16px; text-align: left; font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; }
+    td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 14px; }
+    tr:last-child td { border-bottom: none; }
+    tbody tr { transition: background .15s; }
+    tbody tr:hover { background: rgba(245,166,35,.04); }
+    .td-event { font-weight: 700; color: var(--text); }
+    .td-priority { font-family: 'Rajdhani', sans-serif; font-size: 15px; font-weight: 700; }
+    .p-must    { color: var(--red); }
+    .p-high    { color: var(--accent); }
+    .p-medium  { color: var(--green); }
+    .p-low     { color: var(--muted); }
+    .td-action { color: var(--muted); font-size: 13px; }
+
+    /* ── STACKING GUIDE ── */
+    .guide-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; margin-bottom: 18px; }
+    .guide-card h3 { font-size: 16px; font-weight: 800; color: var(--accent); margin: 20px 0 9px; }
+    .guide-card h3:first-child { margin-top: 0; }
+    .guide-card p { color: var(--muted); line-height: 1.75; margin-bottom: 12px; }
+    .guide-card p:last-child { margin-bottom: 0; }
+    .guide-card strong { color: var(--text); }
+    .guide-card ul, .guide-card ol { padding-left: 20px; color: var(--muted); }
+    .guide-card ul li, .guide-card ol li { margin-bottom: 7px; line-height: 1.75; }
+
+    .tip-box  { background: rgba(245,166,35,.07);  border: 1px solid rgba(245,166,35,.25);  border-radius: 8px; padding: 14px 18px; margin: 14px 0; }
+    .tip-box p { color: var(--text); margin: 0; line-height: 1.7; }
+    .warn-box { background: rgba(232,69,69,.07); border: 1px solid rgba(232,69,69,.3); border-radius: 8px; padding: 14px 18px; margin: 14px 0; }
+    .warn-box p { color: #f08080; margin: 0; line-height: 1.7; }
+
+    /* ── WEEKLY RHYTHM ── */
+    .week-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
+    .day-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 10px; text-align: center; }
+    .day-name { font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+    .day-action { font-size: 12px; color: var(--muted); line-height: 1.5; }
+
+    /* ── FAQ ── */
+    .faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-q { font-weight: 800; color: #fff; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-q::after { content: '+'; color: var(--accent); font-size: 20px; flex-shrink: 0; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-a { color: var(--muted); margin-top: 8px; display: none; line-height: 1.75; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* ── CTA ── */
+    .cta-strip { background: linear-gradient(135deg,#1a1a2e,#252545); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; text-align: center; margin: 32px 0; }
+    .cta-strip h2 { font-family: 'Rajdhani', sans-serif; font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .cta-strip h2 span { color: var(--accent); }
+    .cta-strip p { color: var(--muted); margin-bottom: 20px; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0d0d1a; padding: 13px 28px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 15px; transition: background .2s, transform .15s; }
+    .cta-btn:hover { background: #ffc14d; transform: translateY(-2px); }
+
+    /* ── FOOTER ── */
+    footer { background: #0a0a14; border-top: 1px solid var(--border); padding: 28px 20px 32px; text-align: center; color: var(--muted); font-size: 13px; margin-top: 48px; }
+    footer .footer-links { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 700px) {
+      .events-grid { grid-template-columns: 1fr; }
+      .week-grid { grid-template-columns: repeat(4, 1fr); }
+      nav a { font-size: 11px; }
+    }
+    @media (max-width: 400px) {
+      .week-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo">Spin<span>Rewards</span>Hub</a>
+  <nav>
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Villages</a>
+    <a href="/pets-guide.html">🐾 Pets</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/card-trading-guide.html">🃏 Cards</a>
+    <a href="/events-calendar.html" class="active">📅 Events</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>📅 Coin Master <span>Events Calendar</span> 2026</h1>
+  <p>Every recurring Coin Master event explained — what it does, how long it lasts, which pet to use, and exactly when to spend your spins for maximum rewards.</p>
+  <div class="badges">
+    <span class="badge badge-gold">📅 Updated 2026</span>
+    <span class="badge badge-green">🎯 18 Events Covered</span>
+    <span class="badge badge-purple">⚡ Stacking Strategies Included</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- TOP AD -->
+  <div class="ad-slot" style="min-height:90px;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">728 × 90 Ad Banner</span>
+  </div>
+
+  <!-- INTRO -->
+  <div class="section">
+    <div class="guide-card">
+      <h3>Why Events Are the Most Important Part of Coin Master</h3>
+      <p>Most players treat events as a bonus — something nice to have. But experienced players know that <strong>events are the core of the entire Coin Master economy</strong>. Building during Village Mania costs 20–65% less. Completing a village during Village Master gives 2–5× the normal spin reward. Opening chests during Card Boom gives 50% more cards for the same coins.</p>
+      <p>Ignoring events and playing randomly is one of the biggest mistakes you can make. Players who <strong>plan their spins around events</strong> can progress 2–3× faster than those who don't — without spending any extra money.</p>
+      <p>This calendar explains every event currently in rotation, how often it appears, how long it lasts, which strategy to use, and — most importantly — which events to <em>never miss</em>.</p>
+      <div class="tip-box">
+        <p>💡 <strong>The Golden Rule:</strong> Always check the active events before you start spending spins or building. Spending spins outside a relevant event is leaving free rewards on the table.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="filter-bar">
+    <button class="f-btn active" onclick="filterEvents('all', this)">All Events</button>
+    <button class="f-btn" onclick="filterEvents('building', this)">🏘️ Building</button>
+    <button class="f-btn" onclick="filterEvents('coins', this)">🪙 Coins</button>
+    <button class="f-btn" onclick="filterEvents('cards', this)">🃏 Cards</button>
+    <button class="f-btn" onclick="filterEvents('combat', this)">⚔️ Combat</button>
+    <button class="f-btn" onclick="filterEvents('special', this)">✨ Special</button>
+    <button class="f-btn" onclick="filterEvents('seasonal', this)">🎄 Seasonal</button>
+  </div>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!-- EVENT CARDS -->
+  <!-- ═══════════════════════════════════════════ -->
+  <div class="events-grid" id="eventsGrid">
+
+    <!-- VILLAGE MANIA -->
+    <div class="event-card" data-cat="building">
+      <div class="event-header">
+        <div class="event-emoji">🏗️</div>
+        <div class="event-meta">
+          <h3 style="color:#f5a623;">Village Mania</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">2–3×/week</span>
+            <span class="tag tag-dur">1–2 days</span>
+            <span class="tag tag-type">Building</span>
+            <span class="tag tag-hot">🔥 Must-Use</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>The single most important event for village builders. Village Mania gives either a <strong>20% discount on all building items</strong> or a massive <strong>65% discount on the bottom-row items</strong> (which are always the most expensive items in any village).</p>
+        <p>Never build a village outside of Village Mania if you can help it. The savings are enormous — a 65% discount on a 100B coin village's bottom row alone can save you tens of billions of coins.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Hoard coins Mon–Wed. Build during Village Mania Thu–Sat. Save enough coins to complete the entire village in one Mania session.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VILLAGE MASTER -->
+    <div class="event-card" data-cat="building">
+      <div class="event-header">
+        <div class="event-emoji">🏆</div>
+        <div class="event-meta">
+          <h3 style="color:#f5a623;">Village Master</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">2–3×/week</span>
+            <span class="tag tag-dur">1–2 days</span>
+            <span class="tag tag-type">Building</span>
+            <span class="tag tag-hot">🔥 Must-Use</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>When active, completing your village during Village Master gives <strong>2–5× the normal spin and coin reward</strong> on top of your standard completion prize. You also earn XP, Pet Food, and bonus chests.</p>
+        <p>The best possible scenario is having Village Mania and Village Master active simultaneously — you pay less to build (Mania discount) AND earn more for completing (Master multiplier). This 2026 "stack" is one of the most powerful combinations in the game.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Time your village completion to land during this event. If you're close to finishing a village and Village Master starts — don't wait, complete it immediately.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUILD RUSH -->
+    <div class="event-card" data-cat="building">
+      <div class="event-header">
+        <div class="event-emoji">⚡</div>
+        <div class="event-meta">
+          <h3 style="color:#5b8dee;">Build Rush</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">2–3×/week</span>
+            <span class="tag tag-dur">1–3 days</span>
+            <span class="tag tag-type">Building</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Build Rush is a ladder event — every time you purchase a village upgrade or repair a damaged building, you earn event points. Higher positions on the Build Rush leaderboard reward better prizes including <strong>spins, coins, pet treats, and XP potions</strong>.</p>
+        <p>Build Rush often runs at the same time as Village Mania, meaning your discounted building actions also earn event points — a natural combination.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> If Build Rush overlaps with Mania, build aggressively. Every building purchase earns both Mania discounts and Build Rush points simultaneously.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RAID MADNESS -->
+    <div class="event-card" data-cat="coins combat">
+      <div class="event-header">
+        <div class="event-emoji">⚔️</div>
+        <div class="event-meta">
+          <h3 style="color:#e84545;">Raid Madness</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">2–3×/week</span>
+            <span class="tag tag-dur">2–3 days</span>
+            <span class="tag tag-type">Combat</span>
+            <span class="tag tag-hot">🔥 High Value</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Each raid you perform moves you through event stages, with each stage giving better rewards. Raids are already the best way to earn coins — Raid Madness adds <strong>extra milestone prizes on top of your normal raid earnings</strong> including spins, coins, and pet items.</p>
+        <p>Raid frequency from the slot machine also increases during this event, meaning you get more opportunities to raid per session.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Activate <strong>Foxy pet</strong> before any raid session. Use 3×–5× bet multiplier when you feel a raid coming to maximise the coin haul per raid.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ATTACK MADNESS -->
+    <div class="event-card" data-cat="coins combat">
+      <div class="event-header">
+        <div class="event-emoji">🔨</div>
+        <div class="event-meta">
+          <h3 style="color:#e84545;">Attack Madness</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">1–2×/week</span>
+            <span class="tag tag-dur">2–3 days</span>
+            <span class="tag tag-type">Combat</span>
+            <span class="tag tag-hot">🔥 High Value</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Similar to Raid Madness, Attack Madness rewards you for every attack you perform on another village — regardless of whether the attack destroys a building or is blocked. Each attack earns progress toward milestone prizes including <strong>spins, coins, and XP potions</strong>.</p>
+        <p>Since attacks are more common than raids from the slot machine, Attack Madness is excellent for stacking prizes quickly — especially with Tiger active.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Activate <strong>Tiger pet</strong> during Attack Madness for the maximum coin bonus per attack. Aim for 3×–5× bet when attacks are frequent to maximise coin earnings.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- COIN CRAZE -->
+    <div class="event-card" data-cat="coins">
+      <div class="event-header">
+        <div class="event-emoji">🪙</div>
+        <div class="event-meta">
+          <h3 style="color:#f5c842;">Coin Craze</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">2–3×/week</span>
+            <span class="tag tag-dur">1–2 days</span>
+            <span class="tag tag-type">Coins</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>During Coin Craze, your <strong>spin button turns gold</strong> and every spin, raid, and attack earns you an <strong>extra coin multiplier</strong> on top of your normal earnings. This makes it one of the best events for stacking coins quickly.</p>
+        <p>The golden spin button is your visual indicator — as long as it's gold, the multiplier is active. Spin as much as possible during this window.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Use all your spins during Coin Craze before building. Coins earned during this event go much further when immediately spent on a Mania-discounted village.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARDS BOOM -->
+    <div class="event-card" data-cat="cards">
+      <div class="event-header">
+        <div class="event-emoji">📦</div>
+        <div class="event-meta">
+          <h3 style="color:#a78bfa;">Cards Boom</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">1–2×/week</span>
+            <span class="tag tag-dur">1–2 days</span>
+            <span class="tag tag-type">Cards</span>
+            <span class="tag tag-hot">🔥 Must-Use</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Every chest you open during Cards Boom contains <strong>50% more cards</strong> than normal. Wooden Chests give 3 cards (instead of 2), Golden Chests give 6 (instead of 4), and Magical Chests give 12 (instead of 8).</p>
+        <p>This is the absolute best time to open chests. Never open chests outside of Cards Boom if you can help it — you're leaving 50% of your card-collecting potential unused.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Save your chest-buying coins and wait for Cards Boom. Combine with a Boom Village for the best possible rare and gold card drop rates.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GOLD CARD TRADE -->
+    <div class="event-card" data-cat="cards special">
+      <div class="event-header">
+        <div class="event-emoji">✨</div>
+        <div class="event-meta">
+          <h3 style="color:#f5c842;">Gold Card Trade</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Several/week</span>
+            <span class="tag tag-dur">Hours–1 day</span>
+            <span class="tag tag-type">Cards</span>
+            <span class="tag tag-hot">🔥 Must-Use</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>The only time Gold Cards can be traded with other players. Each event allows <strong>two specific Gold Cards</strong> to be traded. When active, the game will notify you which Gold Cards are currently tradeable.</p>
+        <p>Post in Coin Master Facebook trading groups immediately when a Gold Card Trade event starts to find partners. These windows close fast — sometimes in just a few hours.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Keep a wishlist of which Gold Cards you're missing. When a Gold Trade event opens for a card you need, post immediately in trading groups — don't wait.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARDS FOR CHESTS -->
+    <div class="event-card" data-cat="cards">
+      <div class="event-header">
+        <div class="event-emoji">♻️</div>
+        <div class="event-meta">
+          <h3 style="color:#a78bfa;">Cards for Chests</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Regular</span>
+            <span class="tag tag-dur">1–2 days</span>
+            <span class="tag tag-type">Cards</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>During this event, you can <strong>exchange duplicate cards for chests</strong> containing spins, coins, Pet XP, and more cards. The trade doesn't reduce your star count — a special note during this event window.</p>
+        <p>This is the best time to clear out your duplicate pile. Even 1-star duplicate cards are worth exchanging here, as the chests can contain valuable items to accelerate your progress.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Save your duplicates and exchange them during this event, ideally when Cards Boom is also active — the chests you receive will contain 50% more cards.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIKING QUEST -->
+    <div class="event-card" data-cat="special cards">
+      <div class="event-header">
+        <div class="event-emoji">⚔️</div>
+        <div class="event-meta">
+          <h3 style="color:#5b8dee;">Viking Quest</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Weekly</span>
+            <span class="tag tag-dur">2–3 days</span>
+            <span class="tag tag-type">Special</span>
+            <span class="tag tag-hot">🔥 High Value</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Viking Quest gives you a <strong>separate Viking-themed slot machine</strong> to spin using coins (not regular spins). Completing Viking Quest stages rewards you with spins, coins, Pet XP, Pet Treats, and crucially — <strong>Gold Cards and Joker Cards</strong>.</p>
+        <p>This is one of only a few ways to get Gold Cards outside of chest luck and Gold Trade events. Never skip Viking Quest — the potential for Gold Card and Joker Card drops makes it too valuable to ignore.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Save coins specifically for Viking Quest. Prioritize completing higher stages for the Gold Card and Joker Card rewards at the end of the quest chain.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BET BLAST -->
+    <div class="event-card" data-cat="coins combat">
+      <div class="event-header">
+        <div class="event-emoji">💥</div>
+        <div class="event-meta">
+          <h3 style="color:#f5a623;">Bet Blast</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">1–2×/week</span>
+            <span class="tag tag-dur">1–2 days</span>
+            <span class="tag tag-type">Coins</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Bet Blast significantly <strong>increases the rewards from high-bet spins</strong>. Playing at higher multipliers (3×, 5×, 10×, 25×) unlocks larger reward brackets during attacks and raids — making it a powerful coin-stacking event for experienced spinners.</p>
+        <p>Best used by players who have a large spin reserve and are comfortable spending a lot in one session in exchange for much higher returns.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Stock up 500+ spins before Bet Blast starts. Use 5×–10× bet throughout the event. Activate Tiger for attacks and Foxy for raids to multiply the multiplied rewards further.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BALLOON FRENZY -->
+    <div class="event-card" data-cat="special">
+      <div class="event-header">
+        <div class="event-emoji">🎈</div>
+        <div class="event-meta">
+          <h3 style="color:#f5a623;">Balloon Frenzy</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Several/week</span>
+            <span class="tag tag-dur">Hours</span>
+            <span class="tag tag-type">Special</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>During Balloon Frenzy, colorful balloons float across your village screen. <strong>Tapping them pops them and reveals free rewards</strong> — spins, coins, or pet items. This is a passive event that runs in the background while you play normally.</p>
+        <p>The key is simply to be playing when Balloon Frenzy is active and to tap every balloon you see. Don't let them float off-screen unclaimed.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Keep the game open and tap balloons as soon as they appear. They often contain 5–20 free spins each, and multiple balloons can appear in a single session.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MERCHANT MADNESS -->
+    <div class="event-card" data-cat="special coins">
+      <div class="event-header">
+        <div class="event-emoji">🛒</div>
+        <div class="event-meta">
+          <h3 style="color:#4caf82;">Merchant Madness</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Weekly</span>
+            <span class="tag tag-dur">2–3 days</span>
+            <span class="tag tag-type">Special</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>During Merchant Madness you complete daily quests and missions while playing. For each mission completed, you earn <strong>Merchant Currency</strong> which can be spent in the Merchant Shop to buy large amounts of spins, coins, and special items.</p>
+        <p>The Merchant Shop rates are generally more favourable than normal in-game prices, making this event one of the best for spin-efficient players who complete their daily missions every day.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Check Merchant missions at the start of each session and aim to complete them before the event ends. Prioritize missions that align with what you're already doing (raiding, attacking, building).</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TREASURE HUNT -->
+    <div class="event-card" data-cat="special coins">
+      <div class="event-header">
+        <div class="event-emoji">🗺️</div>
+        <div class="event-meta">
+          <h3 style="color:#4caf82;">Treasure Hunt</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">1–2×/week</span>
+            <span class="tag tag-dur">2–3 days</span>
+            <span class="tag tag-type">Special</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Treasure Hunt is a multi-stage event where spinning, raiding, and attacking earns event progress that moves you through a treasure map. Each stage of the map rewards spins, coins, and special items. Completing the full map gives the grand prize.</p>
+        <p>Some players prefer to save spins and open them all at once during Treasure Hunt to burst through stages quickly and claim the full map reward in one session.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Stock up 200–300 spins before Treasure Hunt begins. Play through them quickly in one sitting to advance stages faster and hit the high-reward milestones.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEA OF FORTUNE -->
+    <div class="event-card" data-cat="special">
+      <div class="event-header">
+        <div class="event-emoji">🌊</div>
+        <div class="event-meta">
+          <h3 style="color:#5b8dee;">Sea of Fortune</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Monthly</span>
+            <span class="tag tag-dur">2 weeks</span>
+            <span class="tag tag-type">Special</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Sea of Fortune is a longer 2-week event offering a <strong>daily reward calendar</strong> — each day you log in and play, you unlock a new special item. Daily rewards include spins, coins, rare items, and pet treats that accumulate over the 2-week window.</p>
+        <p>The key is consistency — missing days means missing rewards. Log in every single day during Sea of Fortune to claim the full reward chain.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Set a daily reminder during Sea of Fortune. Even if you can only play 5 minutes, log in to claim that day's reward — it compounds significantly over 14 days.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOURNAMENT -->
+    <div class="event-card" data-cat="special">
+      <div class="event-header">
+        <div class="event-emoji">🥇</div>
+        <div class="event-meta">
+          <h3 style="color:#f5c842;">Tournaments</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Multiple/week</span>
+            <span class="tag tag-dur">1–2 days</span>
+            <span class="tag tag-type">Competitive</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Tournaments pit you against other players in competitive leaderboards for spin count, attacks, raids, or card sets completed. Top positions on the tournament leaderboard win <strong>Joker Cards, Gold Cards, spins, and coins</strong>.</p>
+        <p>Tournaments are matchmaking-based — you're placed against players of a similar level and activity, making top-3 finishes achievable without having to be the most active player in the game.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Check the tournament type before committing spins. A spin tournament is great when you have many spins saved. A raid tournament is perfect during Raid Madness overlap.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GOLDEN PASS -->
+    <div class="event-card" data-cat="special seasonal">
+      <div class="event-header">
+        <div class="event-emoji">🥇</div>
+        <div class="event-meta">
+          <h3 style="color:#f5c842;">Golden Pass</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Seasonal</span>
+            <span class="tag tag-dur">Several weeks</span>
+            <span class="tag tag-type">Seasonal</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Coin Master's seasonal battle pass. Complete seasonal objectives to unlock free rewards on the free track, or purchase the paid Golden Pass for premium bonuses. Rewards include <strong>spins, coins, XP Potions, Pet Treats, and Joker Cards</strong>.</p>
+        <p>Even the free track provides consistent daily rewards — and the paid pass is one of the highest-value purchases in the game for players who play regularly.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> Complete Golden Pass objectives daily alongside your normal gameplay. Most objectives align with things you'd do anyway — attacking, raiding, building villages.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEASONAL EVENTS -->
+    <div class="event-card" data-cat="seasonal cards">
+      <div class="event-header">
+        <div class="event-emoji">🎄</div>
+        <div class="event-meta">
+          <h3 style="color:#4caf82;">Seasonal Events</h3>
+          <div class="event-tags">
+            <span class="tag tag-freq">Holiday periods</span>
+            <span class="tag tag-dur">1–3 weeks</span>
+            <span class="tag tag-type">Seasonal</span>
+            <span class="tag tag-hot">🔥 High Value</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-body">
+        <p>Major seasonal events occur during holidays (Christmas, Halloween, Easter, New Year, and more). These bring <strong>exclusive limited-time card sets, special Sticker Albums</strong>, and unique gameplay mechanics only available during that season.</p>
+        <p>Completing a seasonal card set and its Sticker Album can reward <strong>50,000+ spins</strong> — by far the largest single reward available in the game. Missing a seasonal event means waiting an entire year for the same cards to return.</p>
+        <div class="event-tip">
+          <p>💡 <strong>Strategy:</strong> When a seasonal event launches, immediately join seasonal trading groups on Facebook to exchange seasonal cards fast. These windows are short — prioritize seasonal sets over regular card sets during the event.</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /events-grid -->
+
+  <!-- MID AD -->
+  <div class="ad-slot" style="min-height:250px; margin-top:32px;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">300 × 250 Ad Rectangle</span>
+  </div>
+
+  <!-- PRIORITY TABLE -->
+  <div class="section">
+    <div class="section-title">🎯 Event <span>Priority Guide</span> — What to Never Skip</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Event</th>
+            <th>Priority</th>
+            <th>Best Action During Event</th>
+            <th>Best Pet</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="td-event">Village Mania + Village Master (stacked)</td><td class="td-priority p-must">🔴 MUST</td><td class="td-action">Build & complete village — max rewards + max discounts</td><td class="td-action">🦏 Rhino (protect while building)</td></tr>
+          <tr><td class="td-event">Seasonal Events (Christmas, Halloween, etc.)</td><td class="td-priority p-must">🔴 MUST</td><td class="td-action">Open seasonal chests, trade cards, complete Album</td><td class="td-action">Any</td></tr>
+          <tr><td class="td-event">Cards Boom</td><td class="td-priority p-must">🔴 MUST</td><td class="td-action">Open all saved chests — 50% more cards per chest</td><td class="td-action">Any</td></tr>
+          <tr><td class="td-event">Gold Card Trade Event</td><td class="td-priority p-must">🔴 MUST</td><td class="td-action">Post in FB groups immediately, trade target Gold Cards</td><td class="td-action">Any</td></tr>
+          <tr><td class="td-event">Viking Quest</td><td class="td-priority p-high">🟠 HIGH</td><td class="td-action">Spend coins on Viking slots, aim for Gold/Joker rewards</td><td class="td-action">Any</td></tr>
+          <tr><td class="td-event">Raid Madness</td><td class="td-priority p-high">🟠 HIGH</td><td class="td-action">Raid aggressively with Foxy at 3×–5× bet</td><td class="td-action">🦊 Foxy</td></tr>
+          <tr><td class="td-event">Attack Madness</td><td class="td-priority p-high">🟠 HIGH</td><td class="td-action">Attack aggressively with Tiger at 3×–5× bet</td><td class="td-action">🐯 Tiger</td></tr>
+          <tr><td class="td-event">Coin Craze</td><td class="td-priority p-high">🟠 HIGH</td><td class="td-action">Spin all available spins for multiplied coin earnings</td><td class="td-action">🦊 Foxy or 🐯 Tiger</td></tr>
+          <tr><td class="td-event">Bet Blast</td><td class="td-priority p-high">🟠 HIGH</td><td class="td-action">Use 5×–10× bet throughout with large spin reserve</td><td class="td-action">🐯 Tiger</td></tr>
+          <tr><td class="td-event">Merchant Madness</td><td class="td-priority p-medium">🟡 MEDIUM</td><td class="td-action">Complete daily missions, redeem Merchant Currency for spins</td><td class="td-action">Any</td></tr>
+          <tr><td class="td-event">Build Rush</td><td class="td-priority p-medium">🟡 MEDIUM</td><td class="td-action">Build during overlap with Mania for dual rewards</td><td class="td-action">🦏 Rhino</td></tr>
+          <tr><td class="td-event">Treasure Hunt</td><td class="td-priority p-medium">🟡 MEDIUM</td><td class="td-action">Burn saved spins in one sitting to advance map stages</td><td class="td-action">Any</td></tr>
+          <tr><td class="td-event">Balloon Frenzy</td><td class="td-priority p-low">⚪ LOW</td><td class="td-action">Play normally — just tap balloons as they appear</td><td class="td-action">Any</td></tr>
+          <tr><td class="td-event">Sea of Fortune</td><td class="td-priority p-low">⚪ LOW</td><td class="td-action">Log in daily to claim each day's reward — passive effort</td><td class="td-action">Any</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- WEEKLY RHYTHM -->
+  <div class="section">
+    <div class="section-title">📆 The Smart <span>Weekly Rhythm</span></div>
+    <div class="guide-card" style="margin-bottom:18px;">
+      <p>Coin Master events rotate on a roughly weekly cycle. Based on 2026 community tracking, here's a proven weekly spin management routine that top players follow:</p>
+    </div>
+    <div class="week-grid">
+      <div class="day-card">
+        <div class="day-name">MON</div>
+        <div class="day-action">Hoard spins. Collect hourly bonuses. Claim daily links. Don't build.</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">TUE</div>
+        <div class="day-action">Continue hoarding. Check for Raid/Attack Madness — use spins if active.</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">WED</div>
+        <div class="day-action">Stack coins via Coin Craze if active. Feed pets, request team card.</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">THU</div>
+        <div class="day-action">Watch for Village Mania start. Begin building if Mania + Mania discount active.</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">FRI</div>
+        <div class="day-action">Complete village during Village Master if both events overlap. Open chests if Cards Boom active.</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">SAT</div>
+        <div class="day-action">Participate in tournaments. Viking Quest if active. Exchange duplicates if Cards for Chests running.</div>
+      </div>
+      <div class="day-card">
+        <div class="day-name">SUN</div>
+        <div class="day-action">Prep for next week. Restock spins. Check Golden Pass progress. Rest day.</div>
+      </div>
+    </div>
+    <div class="tip-box" style="margin-top:18px;">
+      <p>⚠️ <strong>Important:</strong> This is a general rhythm — actual event schedules shift week by week. Always check which events are currently active before committing spins or coins. The principle is the same regardless: <strong>hoard early in the week, spend strategically when the right events align.</strong></p>
+    </div>
+  </div>
+
+  <!-- EVENT STACKING -->
+  <div class="section">
+    <div class="section-title">⚡ <span>Event Stacking</span> — The 2026 Meta</div>
+    <div class="guide-card">
+      <h3>What Is Event Stacking?</h3>
+      <p>Event stacking means deliberately timing your actions to benefit from <strong>two or more events running simultaneously</strong>. Coin Master often runs 3–5 events at once, and the best players always check which ones are overlapping before they act.</p>
+
+      <h3>The Most Powerful Stacks</h3>
+      <ul>
+        <li><strong>Village Mania + Village Master:</strong> Build at a discount AND earn 2–5× the spin reward for completing. The most powerful combination for village builders in 2026.</li>
+        <li><strong>Village Mania + Build Rush:</strong> Every discounted building purchase also earns Build Rush points — dual rewards from a single action.</li>
+        <li><strong>Cards Boom + Boom Village:</strong> Opening chests at a Boom Village already increases rare card drop rates — add Cards Boom on top for 50% more cards per chest at an already elevated drop rate.</li>
+        <li><strong>Raid Madness + Coin Craze + Foxy:</strong> Raids earn extra milestone rewards (Raid Madness) + multiplied coins per raid (Coin Craze) + Foxy's bonus raid dig = massive coin earnings per raid session.</li>
+        <li><strong>Attack Madness + Bet Blast + Tiger:</strong> Attacks earn milestone prizes (Attack Madness) + higher rewards per high-bet attack (Bet Blast) + Tiger's 400%+ coin bonus = the highest single-session coin ceiling in the game.</li>
+      </ul>
+
+      <h3>How to Track Active Events</h3>
+      <p>Active events appear on your <strong>main game screen</strong> with a countdown timer. You can see up to 3–5 events running simultaneously. Before any spin session, glance at the active event banners and decide which ones are worth acting on before starting.</p>
+
+      <div class="warn-box">
+        <p>⚠️ <strong>Don't Waste Spins Outside Events:</strong> Spinning 500 spins with no relevant event active gives a fraction of the rewards you'd get during a Raid Madness + Coin Craze overlap. Patience between events is one of the most underrated Coin Master strategies.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="section">
+    <div class="section-title">❓ <span>FAQ</span> – Coin Master Events</div>
+    <div class="guide-card">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">How often do events change in Coin Master?</div>
+        <div class="faq-a">Most main events run for 2–3 days and rotate multiple times per week. It's common for 3–5 events to be active simultaneously at any given time. Special events like Viking Quest and Seasonal events run less frequently but last longer (1–3 weeks). The event schedule is not publicly fixed in advance — events are triggered by Moon Active's live-ops team and can vary week to week.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Why can't I see some events that other players have?</div>
+        <div class="faq-a">Coin Master uses a system called "Milestone Master" to gate certain events behind village level requirements. Lower-level players may not have access to all events until they've reached specific village milestones. Additionally, Moon Active sometimes A/B tests events with subsets of players, meaning not everyone sees the same events at the same time. Check the Milestone Master feature in-game to see which events unlock at upcoming village levels.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Should I always save spins for events?</div>
+        <div class="faq-a">Generally yes — but with nuance. If your spin count is already at or near the 50-spin cap (meaning the hourly bonus is paused), you should spend spins to keep the hourly bonus ticking even if no ideal event is active. The rule is: never let spins sit at the cap. But if you're well below 50 spins and no high-value event is active, it's worth waiting a few hours for a better event to appear before spending.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">What is the best event combination for building villages fast?</div>
+        <div class="faq-a">The best combination is <strong>Village Mania + Village Master running simultaneously</strong>. Village Mania cuts your building costs by 20–65%, and Village Master multiplies your completion reward by 2–5×. Players who stack these two events regularly complete villages in a fraction of the time and earn far more spins per village compared to building outside these events.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Is there a fixed weekly event schedule?</div>
+        <div class="faq-a">No. Moon Active does not publish a fixed event calendar in advance. Events are managed dynamically by their live-ops team. However, the community has observed general patterns — Village Mania and Village Master tend to run 2–3 times per week, Cards Boom appears roughly weekly, and Attack/Raid Madness rotate frequently. Following dedicated Coin Master communities on Facebook and Reddit is the best way to stay updated on current events.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <h2>Stock Up on Spins <span>Before the Next Event!</span></h2>
+    <p>The more spins you have ready when events align, the more rewards you earn. Claim today's free daily links — updated every morning at 09:00 UTC.</p>
+    <a href="/" class="cta-btn">🎁 Get Today's Free Spins</a>
+  </div>
+
+  <!-- BOTTOM AD -->
+  <div class="ad-slot" style="min-height:90px; margin-bottom:0;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">728 × 90 Ad Banner</span>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Village List</a>
+    <a href="/pets-guide.html">🐾 Pets Guide</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/card-trading-guide.html">🃏 Cards</a>
+    <a href="/events-calendar.html">📅 Events</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/contact.html">Contact Us</a>
+  </div>
+  <p>© 2026 SpinRewardsHub.com — Coin Master fan site. Not affiliated with Moon Active or Coin Master.</p>
+  <p style="margin-top:6px; font-size:11px;">Event frequencies are community estimates based on observed patterns. Actual schedules are managed by Moon Active and may vary.</p>
+</footer>
+
+<!-- Floating Buttons -->
+<button class="fab" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+<button class="fab" id="translate-btn" aria-label="Translate page">🌐</button>
+
+<!-- Translate Panel -->
+<div id="translate-panel" role="dialog" aria-label="Language selector">
+  <p>🌐 Select Language</p>
+  <select id="lang-select" aria-label="Choose language">
+    <option value="">🇬🇧 English</option>
+    <option value="tl">🇵🇭 Filipino</option>
+    <option value="id">🇮🇩 Bahasa Indonesia</option>
+    <option value="th">🇹🇭 Thai</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="ms">🇲🇾 Malay</option>
+    <option value="pt">🇧🇷 Português</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="hi">🇮🇳 Hindi</option>
+  </select>
+</div>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"62d40c0995614c6f93a2871746cca36b"}'></script>
+
+<!-- Google Translate -->
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'gt_hidden');
+  }
+</script>
+<div id="gt_hidden" style="display:none"></div>
+<script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // ── FAQ ──
+  function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
+
+  // ── Filter ──
+  function filterEvents(cat, btn) {
+    document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.event-card').forEach(card => {
+      if (cat === 'all') { card.classList.remove('hidden'); return; }
+      card.classList.toggle('hidden', !card.dataset.cat.includes(cat));
+    });
+  }
+
+  // ── Theme toggle ──
+  const themeBtn = document.getElementById('theme-toggle');
+  if (localStorage.getItem('theme') === 'light') { document.body.classList.add('light-mode'); themeBtn.textContent = '☀️'; }
+  themeBtn.addEventListener('click', function () {
+    document.body.classList.toggle('light-mode');
+    const light = document.body.classList.contains('light-mode');
+    themeBtn.textContent = light ? '☀️' : '🌙';
+    localStorage.setItem('theme', light ? 'light' : 'dark');
+  });
+
+  // ── Translate panel ──
+  const tBtn = document.getElementById('translate-btn');
+  const tPanel = document.getElementById('translate-panel');
+  tBtn.addEventListener('click', function (e) { e.stopPropagation(); tPanel.style.display = tPanel.style.display === 'block' ? 'none' : 'block'; });
+  document.addEventListener('click', function (e) { if (!tPanel.contains(e.target) && e.target !== tBtn) tPanel.style.display = 'none'; });
+
+  // ── Language switcher ──
+  (function () {
+    if (location.search.indexOf('lang=en') !== -1) {
+      var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      document.cookie = 'googtrans=; ' + exp;
+      document.cookie = 'googtrans=; ' + exp + '; domain=' + location.hostname;
+      document.cookie = 'googtrans=; ' + exp + '; domain=.' + location.hostname;
+      history.replaceState(null, '', location.pathname);
+    }
+    var m = document.cookie.match(/googtrans=\/en\/([a-z]{2,})/);
+    if (m) { var s = document.getElementById('lang-select'); if (s) s.value = m[1]; }
+  })();
+  document.getElementById('lang-select').addEventListener('change', function () {
+    var lang = this.value, domain = location.hostname;
+    if (!lang) {
+      ['','domain='+domain,'domain=.'+domain].forEach(function(d){ document.cookie='googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'+(d?' '+d:''); });
+      location.href = location.pathname + '?lang=en'; return;
+    }
+    document.cookie = 'googtrans=/en/' + lang + '; path=/';
+    document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
+    location.reload();
+  });
+</script>
+</body>
+</html>
