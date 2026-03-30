@@ -1,14 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><title>Contact Us - Spin Rewards Hub</title>
-    <style>body{font-family:sans-serif; text-align:center; padding:50px; background:#0d1b2a; color:white;}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Spin Rewards Hub</title>
+  <meta name="description" content="Get in touch with Spin Rewards Hub. Questions about daily Coin Master rewards, broken links, or suggestions? We'd love to hear from you." />
+  <link rel="canonical" href="https://spinrewardshub.com/contact.html" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f0f1a" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:         #0f0f1a;
+      --card:       #1e1e32;
+      --card2:      #252540;
+      --border:     #2e2e50;
+      --accent:     #f5a623;
+      --text:       #e8e8f0;
+      --text-muted: #8888aa;
+      --green:      #4caf82;
+      --radius:     12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-bottom: 2px solid var(--accent);
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    header a { text-decoration: none; color: inherit; }
+    .logo {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: .5px;
+    }
+    .logo span { color: #fff; }
+    nav { margin-left: auto; display: flex; gap: 16px; flex-wrap: wrap; }
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: .5px;
+      text-transform: uppercase;
+      transition: color .2s;
+    }
+    nav a:hover { color: var(--accent); }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(160deg, #1a1a2e, #0f1923 60%);
+      padding: 38px 20px 30px;
+      text-align: center;
+    }
+    .page-hero h1 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(24px, 4vw, 38px);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .page-hero h1 span { color: var(--accent); }
+    .page-hero p { color: var(--text-muted); font-size: 14px; }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+
+    /* ── CONTACT CARD ── */
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--accent);
+      border-radius: var(--radius);
+      padding: 36px 30px;
+      text-align: center;
+    }
+    .contact-card h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .contact-card p {
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+    .contact-card strong { color: var(--text); }
+
+    /* Email block */
+    .email-block {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 24px;
+      margin: 20px 0 28px;
+    }
+    .email-icon {
+      font-size: 26px;
+      line-height: 1;
+    }
+    .email-text {
+      text-align: left;
+    }
+    .email-label {
+      font-size: 11px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .8px;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+    .email-address {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .email-address:hover { text-decoration: underline; }
+
+    /* Info boxes */
+    .info-row {
+      display: flex;
+      gap: 14px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .info-box {
+      flex: 1;
+      min-width: 180px;
+      background: var(--card2);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: left;
+    }
+    .info-box .icon { font-size: 22px; margin-bottom: 8px; }
+    .info-box h4 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .info-box p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+      background: var(--accent);
+      color: #0d0d1a;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      transition: background .2s, transform .15s;
+    }
+    .back-btn:hover { background: #ffc14d; transform: translateY(-1px); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #0a0a14;
+      border-top: 1px solid var(--border);
+      padding: 24px 20px 28px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+    footer .footer-links { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 10px; }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      .contact-card { padding: 24px 16px; }
+      .email-block { flex-direction: column; text-align: center; gap: 8px; }
+      .email-text { text-align: center; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Contact Spin Rewards Hub</h1>
-    <p>Have a question about daily rewards or gaming strategy?</p>
-    <p>Email us at: <strong>khmerpress2012@gmail.com</strong></p>
-    <br>
-    <a href="index.html" style="color:#e9c46a;">Return to Home</a>
+
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo">Spin<span>Rewards</span>Hub</a>
+  <nav>
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Villages</a>
+    <a href="/pets-guide.html">🐾 Pets</a>
+    <a href="/contact.html">✉️ Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="page-hero">
+  <h1>✉️ <span>Contact</span> Us</h1>
+  <p>We'd love to hear from you — questions, suggestions, or broken links</p>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+  <div class="contact-card">
+
+    <h2>Get In Touch</h2>
+    <p>Have a question about today's reward links, found a broken link, or want to suggest new content? Send us an email and we'll get back to you as soon as possible.</p>
+
+    <div class="email-block">
+      <div class="email-icon">📧</div>
+      <div class="email-text">
+        <div class="email-label">Email Us</div>
+        <a class="email-address" href="mailto:khmerpress2012@gmail.com">khmerpress2012@gmail.com</a>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="info-row">
+      <div class="info-box">
+        <div class="icon">🔗</div>
+        <h4>Broken Link?</h4>
+        <p>Coin Master links expire quickly. Email us the date and link number and we'll update it right away.</p>
+      </div>
+      <div class="info-box">
+        <div class="icon">💡</div>
+        <h4>Content Ideas</h4>
+        <p>Want a guide on events, cards, or pets? Let us know and we'll add it to our content queue.</p>
+      </div>
+      <div class="info-box">
+        <div class="icon">⏱️</div>
+        <h4>Response Time</h4>
+        <p>We typically respond within 24–48 hours. Daily link updates happen every morning at 09:00 UTC.</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <a href="/" class="back-btn">← Return to Home</a>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Village List</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/contact.html">Contact Us</a>
+  </div>
+  <p>© 2026 SpinRewardsHub.com — Not affiliated with Moon Active or Coin Master.</p>
+</footer>
+
 </body>
 </html>
