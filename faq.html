@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coin Master FAQ 2026 – Frequently Asked Questions | Spin Rewards Hub</title>
+  <meta name="description" content="Answers to the most frequently asked Coin Master questions in 2026 — free spins, villages, pets, cards, trading, events, and account safety. Everything in one place." />
+  <meta name="keywords" content="Coin Master FAQ, Coin Master questions 2026, Coin Master help, Coin Master how to, Coin Master tips beginners" />
+  <link rel="canonical" href="https://spinrewardshub.com/faq.html" />
+  <meta property="og:title" content="Coin Master FAQ 2026 – Frequently Asked Questions" />
+  <meta property="og:description" content="The most complete Coin Master FAQ — free spins, villages, pets, gold cards, events, and account safety answered." />
+  <meta property="og:url" content="https://spinrewardshub.com/faq.html" />
+  <meta property="og:type" content="article" />
+
+  <!-- Schema.org FAQPage markup — great for Google "People Also Ask" -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I get free spins in Coin Master?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You can get free spins through daily reward links (updated on SpinRewardsHub.com every morning), the hourly spin bonus (5 spins per hour up to 50), daily login bonuses, friend gifts, watching video ads, completing card sets, finishing villages, and participating in events like Raid Madness and Village Master." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many villages are there in Coin Master in 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "As of 2026, there are over 570 villages in Coin Master. Moon Active (the developer) regularly adds new villages through game updates." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I trade Gold Cards any time?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. Gold Cards can only be traded during special Gold Card Trade events. When one is active, the game notifies you and allows two specific Gold Cards to be traded. Outside these events, Gold Cards cannot be sent to friends." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the best pet in Coin Master?",
+        "acceptedAnswer": { "@type": "Answer", "text": "It depends on what you're doing. Foxy is best for raids (up to +119% extra raid coins at max level). Tiger is best for attacks (up to +417% at max level) and is generally considered the most powerful for coin farming. Rhino is best for defense and protecting your village while building." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are Boom Villages in Coin Master?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Boom Villages are specific village levels where you have a higher chance of getting rare and Gold Cards from chests. When you reach a Boom Village, open as many chests as you can afford instead of rushing to the next village." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+  <meta name="theme-color" content="#0f0f1a" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:      #0f0f1a;
+      --card:    #1e1e32;
+      --card2:   #252540;
+      --border:  #2e2e50;
+      --accent:  #f5a623;
+      --text:    #e8e8f0;
+      --muted:   #8888aa;
+      --green:   #4caf82;
+      --blue:    #5b8dee;
+      --radius:  12px;
+    }
+
+    body.light-mode {
+      --bg: #f0f4f8; --card: #ffffff; --card2: #edf2fa;
+      --border: #c0cce0; --accent: #c9852a; --green: #2e8a5c;
+      --blue: #3a6bc4; --text: #1a1a30; --muted: #5a5a7a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--bg); color: var(--text);
+      font-size: 15px; line-height: 1.7;
+      transition: background .3s, color .3s;
+    }
+
+    .goog-te-banner-frame, .skiptranslate { display: none !important; }
+    body { top: 0 !important; }
+
+    /* ── FABs ── */
+    .fab {
+      position: fixed; left: 18px; z-index: 9999;
+      width: 50px; height: 50px; border-radius: 50%; border: none;
+      font-size: 1.4em; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.4);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .18s; -webkit-tap-highlight-color: transparent;
+    }
+    .fab:active { transform: scale(.93); }
+    #theme-toggle { bottom: 24px; background: var(--accent); color: #0d0d1a; }
+    #translate-btn { bottom: 84px; background: var(--card2); color: var(--text); border: 1px solid var(--border); }
+    #translate-panel {
+      position: fixed; bottom: 144px; left: 14px; z-index: 9998;
+      background: var(--card); border: 2px solid var(--border);
+      border-radius: 14px; padding: 14px 16px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.45);
+      display: none; width: 230px; text-align: center;
+    }
+    #translate-panel p { margin: 0 0 10px; font-size: 13px; color: var(--muted); font-weight: 700; }
+    #lang-select {
+      width: 100%; padding: 10px 12px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--bg);
+      color: var(--text); font-size: 14px; cursor: pointer; outline: none;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      border-bottom: 2px solid var(--accent);
+      padding: 14px 20px; display: flex; align-items: center; gap: 14px;
+      position: sticky; top: 0; z-index: 100;
+    }
+    header a { text-decoration: none; color: inherit; }
+    .logo { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; color: var(--accent); letter-spacing: .5px; white-space: nowrap; }
+    .logo span { color: #fff; }
+    nav { margin-left: auto; display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    nav a { color: var(--muted); text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: .5px; text-transform: uppercase; transition: color .2s; }
+    nav a:hover, nav a.active { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, #1a1a2e, #0f1923 60%);
+      padding: 44px 20px 34px; text-align: center; position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(245,166,35,.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 { font-family: 'Rajdhani', sans-serif; font-size: clamp(24px,5vw,44px); font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { color: var(--muted); max-width: 600px; margin: 0 auto 20px; }
+    .badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+    .badge { display: inline-flex; align-items: center; gap: 5px; padding: 5px 14px; border-radius: 30px; font-size: 12px; font-weight: 800; letter-spacing: .4px; text-transform: uppercase; }
+    .badge-gold  { background: rgba(245,166,35,.13); border: 1px solid var(--accent); color: var(--accent); }
+    .badge-green { background: rgba(76,175,130,.13);  border: 1px solid var(--green);  color: var(--green); }
+    .badge-blue  { background: rgba(91,141,238,.13);  border: 1px solid var(--blue);   color: #7aaff5; }
+
+    /* ── CONTAINER ── */
+    .container { max-width: 860px; margin: 0 auto; padding: 0 16px; }
+
+    /* ── AD SLOT ── */
+    .ad-slot {
+      background: var(--card2); border: 1px dashed var(--border); border-radius: var(--radius);
+      padding: 18px; margin: 24px auto; max-width: 728px; color: var(--muted);
+      display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 4px;
+    }
+    .ad-label { font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+
+    /* ── SEARCH ── */
+    .search-wrap { position: relative; margin: 28px 0 8px; }
+    .search-wrap input {
+      width: 100%; background: var(--card); border: 1px solid var(--border);
+      border-radius: 10px; color: var(--text);
+      padding: 14px 18px 14px 46px;
+      font-family: 'Nunito', sans-serif; font-size: 15px; outline: none;
+      transition: border-color .2s;
+    }
+    .search-wrap input:focus { border-color: var(--accent); }
+    .search-wrap input::placeholder { color: var(--muted); }
+    .search-wrap::before { content: '🔍'; position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-size: 16px; }
+    .search-info { color: var(--muted); font-size: 13px; margin-bottom: 20px; }
+    .search-info span { color: var(--accent); font-weight: 800; }
+
+    /* ── CATEGORY FILTERS ── */
+    .cat-bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 28px; }
+    .cat-btn {
+      padding: 7px 16px; border-radius: 8px; border: 1px solid var(--border);
+      background: var(--card); color: var(--muted);
+      font-family: 'Nunito', sans-serif; font-weight: 700; font-size: 12px;
+      cursor: pointer; transition: all .2s; text-transform: uppercase; letter-spacing: .4px;
+    }
+    .cat-btn:hover { border-color: var(--accent); color: var(--accent); }
+    .cat-btn.active { background: var(--accent); border-color: var(--accent); color: #000; }
+
+    /* ── FAQ GROUPS ── */
+    .faq-group { margin-bottom: 36px; }
+    .faq-group-title {
+      font-family: 'Rajdhani', sans-serif; font-size: 20px; font-weight: 700;
+      color: var(--accent); margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+      padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    }
+
+    /* ── FAQ ITEMS ── */
+    .faq-item {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); margin-bottom: 10px;
+      overflow: hidden; transition: box-shadow .2s;
+    }
+    .faq-item:hover { box-shadow: 0 4px 16px rgba(0,0,0,.2); }
+    .faq-item.hidden { display: none; }
+
+    .faq-q {
+      padding: 16px 20px; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; gap: 14px;
+      font-weight: 800; font-size: 15px; color: var(--text);
+      user-select: none;
+    }
+    .faq-q:hover { color: var(--accent); }
+    .faq-chevron {
+      flex-shrink: 0; width: 26px; height: 26px;
+      background: var(--card2); border: 1px solid var(--border);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 16px; color: var(--accent); transition: transform .25s, background .2s;
+      line-height: 1;
+    }
+    .faq-item.open .faq-chevron { transform: rotate(45deg); background: var(--accent); color: #0d0d1a; border-color: var(--accent); }
+
+    .faq-a {
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, padding .35s ease;
+      padding: 0 20px;
+    }
+    .faq-item.open .faq-a { max-height: 800px; padding: 0 20px 18px; }
+
+    .faq-a p { color: var(--muted); line-height: 1.8; margin-bottom: 10px; }
+    .faq-a p:last-child { margin-bottom: 0; }
+    .faq-a strong { color: var(--text); }
+    .faq-a a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    .faq-a a:hover { text-decoration: underline; }
+    .faq-a ul, .faq-a ol { padding-left: 20px; color: var(--muted); margin-bottom: 10px; }
+    .faq-a ul li, .faq-a ol li { margin-bottom: 6px; line-height: 1.75; }
+
+    /* ── NO RESULTS ── */
+    #noResults { display: none; text-align: center; padding: 40px 20px; color: var(--muted); }
+    #noResults h3 { font-size: 18px; color: var(--text); margin-bottom: 8px; }
+
+    /* ── CTA ── */
+    .cta-strip { background: linear-gradient(135deg,#1a1a2e,#252545); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; text-align: center; margin: 36px 0; }
+    .cta-strip h2 { font-family: 'Rajdhani', sans-serif; font-size: 26px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+    .cta-strip h2 span { color: var(--accent); }
+    .cta-strip p { color: var(--muted); margin-bottom: 20px; font-size: 14px; }
+    .cta-btns { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .cta-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #0d0d1a; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 800; font-size: 14px; transition: background .2s, transform .15s; }
+    .cta-btn:hover { background: #ffc14d; transform: translateY(-2px); }
+    .cta-btn-outline { background: transparent; border: 2px solid var(--accent); color: var(--accent); }
+    .cta-btn-outline:hover { background: rgba(245,166,35,.1); }
+
+    /* ── FOOTER ── */
+    footer { background: #0a0a14; border-top: 1px solid var(--border); padding: 28px 20px 32px; text-align: center; color: var(--muted); font-size: 13px; margin-top: 48px; }
+    footer .footer-links { display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin-bottom: 12px; }
+    footer a { color: var(--accent); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav a { font-size: 11px; gap: 10px; }
+      .faq-q { font-size: 14px; padding: 14px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo">Spin<span>Rewards</span>Hub</a>
+  <nav>
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Villages</a>
+    <a href="/pets-guide.html">🐾 Pets</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/events-calendar.html">📅 Events</a>
+    <a href="/faq.html" class="active">❓ FAQ</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>❓ Coin Master <span>FAQ</span> 2026</h1>
+  <p>The most frequently asked Coin Master questions — answered clearly and honestly. Search or browse by topic below.</p>
+  <div class="badges">
+    <span class="badge badge-gold">📅 Updated 2026</span>
+    <span class="badge badge-green">✅ 50+ Questions Answered</span>
+    <span class="badge badge-blue">🔍 Searchable</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- TOP AD -->
+  <div class="ad-slot" style="min-height:90px;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">728 × 90 Ad Banner</span>
+  </div>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <input type="text" id="faqSearch" placeholder="Search questions… e.g. 'gold cards', 'Foxy', 'boom village'" oninput="searchFAQ()" />
+  </div>
+  <div class="search-info">Showing <span id="visibleCount">50</span> questions</div>
+
+  <!-- CATEGORY FILTERS -->
+  <div class="cat-bar">
+    <button class="cat-btn active" onclick="filterCat('all', this)">All</button>
+    <button class="cat-btn" onclick="filterCat('spins', this)">🎰 Free Spins</button>
+    <button class="cat-btn" onclick="filterCat('villages', this)">🏘️ Villages</button>
+    <button class="cat-btn" onclick="filterCat('pets', this)">🐾 Pets</button>
+    <button class="cat-btn" onclick="filterCat('cards', this)">🃏 Cards</button>
+    <button class="cat-btn" onclick="filterCat('events', this)">📅 Events</button>
+    <button class="cat-btn" onclick="filterCat('account', this)">🔐 Account</button>
+    <button class="cat-btn" onclick="filterCat('general', this)">🎮 General</button>
+  </div>
+
+  <!-- ═══════════ FREE SPINS ═══════════ -->
+  <div class="faq-group" data-cat="spins">
+    <div class="faq-group-title">🎰 Free Spins</div>
+
+    <div class="faq-item" data-cat="spins">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How do I get free spins in Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>There are many ways to get free spins — not just daily links! The main sources are:</p>
+        <ul>
+          <li><strong>Daily reward links</strong> — claim them every day on this site (updated 09:00 UTC)</li>
+          <li><strong>Hourly bonus</strong> — 5 spins every hour, up to a cap of 50 spins</li>
+          <li><strong>Daily login bonus</strong> — log in every day to keep your streak and earn bonus spins</li>
+          <li><strong>Friend gifts</strong> — send and receive 1 spin per Facebook friend per day (up to 50/day)</li>
+          <li><strong>Complete card sets</strong> — rewards thousands of spins per completed set</li>
+          <li><strong>Complete a village</strong> — gives spins + a free chest on completion</li>
+          <li><strong>Watch video ads</strong> — a few free spins when you're below 10 spins</li>
+          <li><strong>Events & Golden Pass</strong> — milestone rewards include large spin prizes</li>
+        </ul>
+        <p>See our full <a href="/free-spins-guide.html">Free Spins Guide</a> for all 12 methods explained in detail.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="spins">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Why did my hourly spin bonus stop?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>The hourly bonus stops accumulating once you hit the <strong>50-spin cap</strong>. Coin Master won't add more spins until you drop below 50. Log in and use some spins to keep the hourly timer running. To maximize free spins, never let your count sit at 50 for long.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="spins">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How long do daily spin links stay active?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Most official Coin Master spin links expire within <strong>3 days</strong> of being posted — some expire even faster (within 24 hours). We update SpinRewardsHub every morning at 09:00 UTC with the freshest links. Bookmark the homepage and check daily to avoid missing expired ones.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="spins">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I get free spins without a Facebook account?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Yes — but you'll miss out on the <strong>friend gifting system</strong> (up to 50 spins/day) and the <strong>invite friend bonus</strong> (40 spins per new friend who joins). Daily links, hourly bonuses, login bonuses, card set rewards, video ads, and events all work without Facebook. Connecting Facebook is still strongly recommended to unlock the full potential of daily free spins.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="spins">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Are "unlimited free spins" generators real?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p><strong>No — they are all scams.</strong> No third-party tool can generate Coin Master spins. These websites are designed to steal your Facebook login credentials or install malware on your device. The only legitimate spin sources are the in-game systems, official social media giveaways from Moon Active, and verified fan sites like SpinRewardsHub that link to official <code>rewards.coinmaster.com</code> URLs. Never enter your Coin Master or Facebook password on any third-party website.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="spins">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How many free spins can I realistically earn per day?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>An active player combining all methods can realistically earn <strong>500–1,000+ spins per day</strong>. Casual players who only check in once daily can still expect 150–300 spins from the easiest methods. The biggest variables are: how many active Facebook friends you have for gifting, whether high-value events are running, and how consistently you claim daily links.</p>
+      </div>
+    </div>
+
+  </div><!-- /spins -->
+
+  <!-- ═══════════ VILLAGES ═══════════ -->
+  <div class="faq-group" data-cat="villages">
+    <div class="faq-group-title">🏘️ Villages & Building</div>
+
+    <div class="faq-item" data-cat="villages">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How many villages are there in Coin Master in 2026?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>As of 2026, there are over <strong>570 villages</strong> in Coin Master. Moon Active regularly adds new villages through game updates, so this number grows over time. See our <a href="/village-list.html">full Village List</a> for every village name and build cost.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="villages">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the best time to build a village?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Always build during <strong>Village Mania</strong> — it gives either a 20% discount on all items or a 65% discount on the bottom-row items. If you can also time your village <em>completion</em> to happen during <strong>Village Master</strong>, you'll earn 2–5× the normal spin and coin reward on top of the savings. This combo is the most powerful strategy for efficient village progression.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="villages">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Why do village costs keep increasing?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Each village is more expensive than the last by design — it's how Coin Master scales difficulty. Costs start at a few million coins and grow exponentially, reaching hundreds of billions by Level 200+ and trillions at the highest levels. There's also a community-reported (though not officially confirmed) theory that your <strong>Star count</strong> affects your village costs — more Stars may mean higher prices.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="villages">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What are Boom Villages and why do they matter?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p><strong>Boom Villages</strong> are specific village levels where your chance of getting rare and Gold Cards from chests is significantly higher than normal. When you arrive at a Boom Village, don't rush through it — open as many chests as you can afford to maximize rare card drops. <strong>Big Boom Villages</strong> are an even rarer tier with the highest drop rates in the game. Check our <a href="/village-list.html">Village List</a> to see all confirmed Boom Villages marked with 💥 and ⚡.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="villages">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Should I build one item at a time or all at once?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Always build <strong>all items in one session</strong> if possible. Building one item at a time leaves your village partially built overnight — and other players can attack and destroy individual items, forcing you to spend coins on repairs. If you complete all 5 village items in a single session, your coins are safe inside the buildings and you remove the repair risk entirely.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="villages">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What happens after completing the last village?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Once you've completed all available villages, there's no special end-game reward waiting for you. All you can do is stockpile coins and wait for Moon Active to add new villages in future updates. The game is designed to always keep adding content — so the end of the current village list is just a temporary pause.</p>
+      </div>
+    </div>
+
+  </div><!-- /villages -->
+
+  <!-- MID AD -->
+  <div class="ad-slot" style="min-height:250px;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">300 × 250 Ad Rectangle</span>
+  </div>
+
+  <!-- ═══════════ PETS ═══════════ -->
+  <div class="faq-group" data-cat="pets">
+    <div class="faq-group-title">🐾 Pets</div>
+
+    <div class="faq-item" data-cat="pets">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What are the three pets in Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>The three pets are <strong>Foxy</strong> (raid booster), <strong>Tiger</strong> (attack booster), and <strong>Rhino</strong> (village defender). Foxy unlocks at Village 4 automatically. Tiger unlocks by completing the Beasts card set. Rhino unlocks by completing the Creatures card set. See our full <a href="/pets-guide.html">Pets Guide</a> for detailed level tables and strategies.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pets">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the best pet in Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>It depends on your playstyle. <strong>Tiger</strong> is widely considered the best for farming coins because attacks are more frequent than raids and Tiger's max bonus tops out at +417% at Level 300. <strong>Foxy</strong> is the best raid pet, doubling your raid coins at Level 100 and reaching +119% at max Level 400. <strong>Rhino</strong> is essential for protection while building villages — at max Level 200 he blocks 70% of attacks. All three are important and should be levelled up over time.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pets">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How long does a pet stay active after feeding?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Each Pet Treat activates your pet for <strong>4 hours</strong> of consecutive time. The timer runs continuously whether you're playing or not — you can't pause it by switching pets. You can stack multiple treats to extend the active period (e.g., 3 treats = 12 hours active). There's also a free 15-minute activation available once per day — look for the green food icon on the main slot screen.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pets">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I have more than one pet active at once?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Only if you've reached <strong>Village Level 200+</strong> and have the <strong>Pet Crew feature</strong> unlocked. Before that, only one pet can be active at a time. With Pet Crew, all three pets can be active simultaneously — giving you Foxy's raid bonus, Tiger's attack bonus, and Rhino's defense block all at once.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pets">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Does Rhino protect my village when I'm offline?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Yes! As long as Rhino has an active Pet Treat, he will attempt to block attacks even while you're not playing. At max level, Rhino blocks 70% of incoming attacks. This makes feeding Rhino before going offline one of the best habits to protect your village progress — especially when you have unfinished buildings.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="pets">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What are Pet Outfits and when do they unlock?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Pet Outfits unlock at <strong>Village Level 210</strong>. They are cosmetic + functional items that boost your pet's performance beyond their base stats. There are four outfit sets (Charmed, Space, Viking, Ninja) with five rarity tiers. Foxy outfits boost raid %, Tiger outfits boost attack %, and Rhino outfits boost block %. Outfits are obtained from events, chests, and milestone rewards.</p>
+      </div>
+    </div>
+
+  </div><!-- /pets -->
+
+  <!-- ═══════════ CARDS ═══════════ -->
+  <div class="faq-group" data-cat="cards">
+    <div class="faq-group-title">🃏 Cards & Trading</div>
+
+    <div class="faq-item" data-cat="cards">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How do I trade cards in Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>To trade a regular card: open your Card Collection → tap the set → tap the card → tap <strong>Send</strong>. You need at least 2 copies of a card to send one. Your account must be connected to Facebook to trade with friends. Gold Cards can <strong>only be traded during special Gold Card Trade events</strong>. See our full <a href="/card-trading-guide.html">Card Trading Guide</a> for step-by-step instructions.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="cards">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I trade Gold Cards any time?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>No. Gold Cards can <strong>only be traded during special Gold Card Trade events</strong>. When one is active, the game notifies you and two specific Gold Cards become tradeable. Outside these events, the Send button is disabled for Gold Cards and you'll see the message: "This card is golden. It can't be sent to friends." Gold Trade events are frequent — check your game regularly for notifications.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="cards">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is a Joker Card and how do I use it?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>A Joker Card is a wildcard that lets you choose <strong>any single missing card</strong> and instantly add it to your collection — including rare, epic, legendary, and even Gold Cards. Joker Cards are obtained from tournament leaderboards, special events, Viking Quest, and the Golden Pass. Save them for the hardest-to-find cards blocking you from completing a high-reward set — don't waste them on cards you could reasonably get from chests or trading.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="cards">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Which chest gives the best chance of getting rare cards?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>The <strong>Magical Chest</strong> gives the highest rare and Gold Card drop rates, and gives 8 cards per chest (vs 4 for Golden and 2 for Wooden). For maximum results, open Magical Chests at a confirmed <strong>Boom Village</strong> during a <strong>Cards Boom event</strong>. This three-way combination gives the best possible card drop rates in the entire game.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="cards">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Why can't I send a card to a friend?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>There are two common reasons: (1) You only have <strong>one copy</strong> of that card — you need at least 2 to send one. (2) The card is a <strong>Gold Card</strong> and no Gold Card Trade event is currently active. Check your duplicate count on each card before attempting to trade, and watch for Gold Trade event notifications in-game.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="cards">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How many cards are in each set?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Most card sets contain <strong>9 cards</strong>. Older or simpler sets may have fewer. Each card in a set has a different star rarity from 1-star (common) to 5-star (legendary) or Gold. You need all cards in a set to claim the full completion reward, which can range from a few hundred spins to tens of thousands depending on the set's average rarity.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="cards">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What are seasonal cards and are they different from regular cards?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Yes — seasonal cards are a <strong>completely separate collection</strong> from regular cards. They're only available during specific limited-time events (Christmas, Halloween, Easter, etc.) and have their own Albums with separate reward tracks. Completing a seasonal card Album can reward <strong>50,000+ spins</strong> — the largest single reward in the game. When a seasonal event ends, those cards are no longer obtainable until the event returns (usually annually).</p>
+      </div>
+    </div>
+
+  </div><!-- /cards -->
+
+  <!-- ═══════════ EVENTS ═══════════ -->
+  <div class="faq-group" data-cat="events">
+    <div class="faq-group-title">📅 Events</div>
+
+    <div class="faq-item" data-cat="events">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How often do events change in Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Most main events run for <strong>2–3 days</strong> and rotate multiple times per week, with 3–5 events active simultaneously at any given time. Special events like Viking Quest and Seasonal events run less frequently but last longer (1–3 weeks). Moon Active manages the schedule dynamically — there is no fixed public calendar. Following dedicated Coin Master Facebook communities is the best way to stay updated.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="events">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the best event combination for building villages?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>The best combination is <strong>Village Mania + Village Master running simultaneously</strong>. Village Mania cuts your building costs by 20–65%, while Village Master multiplies your completion reward by 2–5×. Players who consistently time their builds to land during this stack progress 2–3× faster than those who build randomly. If Build Rush is also active at the same time, every building action earns event points on top of everything else.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="events">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the Cards Boom event?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Cards Boom gives you <strong>50% more cards per chest</strong>: Wooden → 3 cards (instead of 2), Golden → 6 (instead of 4), Magical → 12 (instead of 8). It's the single best time to open chests. Save your coins and hold off on buying chests until Cards Boom is active — you get significantly more value for the same coin spend.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="events">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Why can't I see some events other players have?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Coin Master gates certain events behind village level requirements using a system called <strong>Milestone Master</strong>. Lower-level players may not have access to all events until they've reached specific village milestones. Moon Active also occasionally A/B tests events with subsets of players, meaning not everyone sees identical events at the same time. Check the Milestone Master feature in-game to see which events unlock at upcoming village levels.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="events">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Is there a fixed weekly event schedule?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>No — Moon Active does not publish a fixed event calendar in advance. Events are managed live by their team and can vary week to week. However, patterns exist: Village Mania and Village Master tend to run 2–3 times per week, Cards Boom appears roughly weekly, and Attack/Raid Madness rotate frequently. See our <a href="/events-calendar.html">Events Calendar</a> for a full guide to every event and the smartest weekly routine for using them.</p>
+      </div>
+    </div>
+
+  </div><!-- /events -->
+
+  <!-- ═══════════ ACCOUNT ═══════════ -->
+  <div class="faq-group" data-cat="account">
+    <div class="faq-group-title">🔐 Account & Safety</div>
+
+    <div class="faq-item" data-cat="account">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Do I need a Facebook account to play Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>No — you can play Coin Master as a guest without Facebook. However, connecting Facebook unlocks several important features: the friend gifting system (up to 50 free spins/day), the invite friends bonus (40 spins per new friend), card trading with friends, and team features. Playing without Facebook means missing out on these consistent daily spin sources.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="account">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can my account get banned for using free spin links?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>No — using legitimate daily spin links from official Moon Active social media channels or verified fan sites like SpinRewardsHub is completely safe. All links we share go directly to <code>rewards.coinmaster.com</code> — the official reward URL. <strong>What can get you banned</strong> is using third-party hack tools, spin generators, or unauthorized automation scripts. Stick to legitimate methods and your account will always be safe.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="account">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        How do I save and back up my Coin Master progress?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>The best way to protect your progress is to <strong>connect your game to your Facebook account</strong>. Your village level, spins, coins, cards, and pets are all saved to your Facebook-linked profile. If you switch phones or reinstall the app, simply log back in with the same Facebook account to restore everything. Playing as a guest risks losing all progress if you uninstall the app or change devices.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="account">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Why did my Coin Master progress disappear?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>This usually happens if you were playing as a <strong>guest (not connected to Facebook)</strong> and reinstalled the app or changed devices. Guest progress is stored locally and cannot be recovered once lost. If you were connected to Facebook, log back into the game using the same Facebook account to restore your data. If you believe your account was compromised, contact <a href="https://support.coinmastergame.com" target="_blank">Coin Master Support</a> directly.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="account">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Is Coin Master free to play?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Yes — Coin Master is free to download and play. The game generates revenue through optional in-app purchases (buying spins, coins, or special offers). However, it is entirely possible to progress through the game without spending any money by using daily free spin links, events, friend gifting, and card set rewards. Many players reach Village 200+ without any purchases.</p>
+      </div>
+    </div>
+
+  </div><!-- /account -->
+
+  <!-- ═══════════ GENERAL ═══════════ -->
+  <div class="faq-group" data-cat="general">
+    <div class="faq-group-title">🎮 General Gameplay</div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the main goal of Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>The core objective is to <strong>build and complete villages</strong> by spending coins earned from the slot machine. Each village has 5 items to build and upgrade. Once a village is complete, you move to the next one — which is more expensive. Along the way you raid and attack other players' villages for coins, collect cards to complete sets, and use pets to maximize your earnings and protect your progress.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is a Raid and how does it work?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>A Raid is triggered when you spin three pigs on the slot machine. You're taken to another player's village where you can <strong>dig up to 3 of 4 spots</strong> to steal their stored coins. With Foxy pet active, she digs the 4th spot for an extra bonus. Raids are one of the fastest ways to earn coins — especially during Raid Madness events when raid frequency increases and milestone prizes are available.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the difference between an Attack and a Raid?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p><strong>Raids</strong> target a random player's stored coins — you dig spots to steal their wealth. <strong>Attacks</strong> target a random player's village buildings — you destroy a building, which forces them to spend coins on repairs. Raids earn more coins directly, while attacks with Tiger active also earn a significant coin bonus. Both are important for different strategies.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What are shields in Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Shields protect your village from attacks. When a player attacks you and you have a shield active, the attack is absorbed and the shield is consumed — your building is not damaged. You can hold up to <strong>5 shields</strong> at once, earned from spinning the slot machine. When shields run out, Rhino pet acts as a backup defense with a percentage chance to block additional attacks.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        What is the Golden Pass in Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>The Golden Pass is Coin Master's <strong>seasonal battle pass</strong>. It has a free track (available to everyone) and a paid premium track. By completing seasonal objectives, you unlock tier rewards including spins, coins, XP Potions, Pet Treats, and Joker Cards. Even the free track provides consistent daily rewards — the paid pass offers significantly better bonuses and is considered one of the best-value purchases for regular players.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I play Coin Master on PC?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Coin Master is primarily a mobile game for iOS and Android. There is no official PC version. However, some players use <strong>Android emulators</strong> like BlueStacks or LDPlayer on their PC to play the mobile version on a larger screen. Note: using emulators is not officially supported by Moon Active, and doing so is at your own risk.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" data-cat="general">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Who developed Coin Master?
+        <span class="faq-chevron">+</span>
+      </div>
+      <div class="faq-a">
+        <p>Coin Master was developed by <strong>Moon Active</strong>, a Tel Aviv, Israel-based mobile game company. The game has been downloaded over 300 million times worldwide and has been one of the top-grossing mobile games in multiple countries since 2019. Moon Active continues to actively update and expand the game with new villages, events, and features.</p>
+      </div>
+    </div>
+
+  </div><!-- /general -->
+
+  <!-- NO RESULTS MESSAGE -->
+  <div id="noResults">
+    <h3>No questions found</h3>
+    <p>Try a different search term, or browse a category above.</p>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <h2>Ready to Play <span>Smarter?</span></h2>
+    <p>Use our guides and daily spin links to progress faster without spending money.</p>
+    <div class="cta-btns">
+      <a href="/" class="cta-btn">🎁 Today's Free Spins</a>
+      <a href="/events-calendar.html" class="cta-btn cta-btn-outline">📅 Events Calendar</a>
+      <a href="/village-list.html" class="cta-btn cta-btn-outline">🏘️ Village List</a>
+    </div>
+  </div>
+
+  <!-- BOTTOM AD -->
+  <div class="ad-slot" style="min-height:90px; margin-bottom:0;">
+    <div class="ad-label">Advertisement</div>
+    <!-- Ad Network Code Here -->
+    <span style="font-size:13px;">728 × 90 Ad Banner</span>
+  </div>
+
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-links">
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Village List</a>
+    <a href="/pets-guide.html">🐾 Pets Guide</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/card-trading-guide.html">🃏 Cards</a>
+    <a href="/events-calendar.html">📅 Events</a>
+    <a href="/faq.html">❓ FAQ</a>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/contact.html">Contact Us</a>
+  </div>
+  <p>© 2026 SpinRewardsHub.com — Coin Master fan site. Not affiliated with Moon Active or Coin Master.</p>
+</footer>
+
+<!-- Floating Buttons -->
+<button class="fab" id="theme-toggle" aria-label="Toggle theme">🌙</button>
+<button class="fab" id="translate-btn" aria-label="Translate page">🌐</button>
+
+<!-- Translate Panel -->
+<div id="translate-panel" role="dialog" aria-label="Language selector">
+  <p>🌐 Select Language</p>
+  <select id="lang-select" aria-label="Choose language">
+    <option value="">🇬🇧 English</option>
+    <option value="tl">🇵🇭 Filipino</option>
+    <option value="id">🇮🇩 Bahasa Indonesia</option>
+    <option value="th">🇹🇭 Thai</option>
+    <option value="vi">🇻🇳 Tiếng Việt</option>
+    <option value="ms">🇲🇾 Malay</option>
+    <option value="pt">🇧🇷 Português</option>
+    <option value="es">🇪🇸 Español</option>
+    <option value="de">🇩🇪 Deutsch</option>
+    <option value="fr">🇫🇷 Français</option>
+    <option value="hi">🇮🇳 Hindi</option>
+  </select>
+</div>
+
+<!-- Cloudflare Web Analytics -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"62d40c0995614c6f93a2871746cca36b"}'></script>
+
+<!-- Google Translate -->
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'gt_hidden');
+  }
+</script>
+<div id="gt_hidden" style="display:none"></div>
+<script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+  // ── Open / close individual FAQ ──
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+
+  // ── Category filter ──
+  let activeCat = 'all';
+  function filterCat(cat, el) {
+    activeCat = cat;
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    el.classList.add('active');
+    applyFilters();
+  }
+
+  // ── Search ──
+  function searchFAQ() { applyFilters(); }
+
+  function applyFilters() {
+    const q = document.getElementById('faqSearch').value.toLowerCase().trim();
+    let visible = 0;
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      const cat   = item.dataset.cat || '';
+      const text  = item.innerText.toLowerCase();
+      const catOk = activeCat === 'all' || cat === activeCat;
+      const txtOk = !q || text.includes(q);
+      const show  = catOk && txtOk;
+      item.classList.toggle('hidden', !show);
+      if (show) visible++;
+    });
+
+    // Show/hide group titles
+    document.querySelectorAll('.faq-group').forEach(group => {
+      const groupCat = group.dataset.cat;
+      const anyVisible = [...group.querySelectorAll('.faq-item')].some(i => !i.classList.contains('hidden'));
+      group.style.display = anyVisible ? '' : 'none';
+    });
+
+    document.getElementById('visibleCount').textContent = visible;
+    document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  // ── Theme toggle ──
+  const themeBtn = document.getElementById('theme-toggle');
+  if (localStorage.getItem('theme') === 'light') { document.body.classList.add('light-mode'); themeBtn.textContent = '☀️'; }
+  themeBtn.addEventListener('click', function () {
+    document.body.classList.toggle('light-mode');
+    const light = document.body.classList.contains('light-mode');
+    themeBtn.textContent = light ? '☀️' : '🌙';
+    localStorage.setItem('theme', light ? 'light' : 'dark');
+  });
+
+  // ── Translate panel ──
+  const tBtn = document.getElementById('translate-btn');
+  const tPanel = document.getElementById('translate-panel');
+  tBtn.addEventListener('click', function (e) { e.stopPropagation(); tPanel.style.display = tPanel.style.display === 'block' ? 'none' : 'block'; });
+  document.addEventListener('click', function (e) { if (!tPanel.contains(e.target) && e.target !== tBtn) tPanel.style.display = 'none'; });
+
+  // ── Language switcher ──
+  (function () {
+    if (location.search.indexOf('lang=en') !== -1) {
+      var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      document.cookie = 'googtrans=; ' + exp;
+      document.cookie = 'googtrans=; ' + exp + '; domain=' + location.hostname;
+      document.cookie = 'googtrans=; ' + exp + '; domain=.' + location.hostname;
+      history.replaceState(null, '', location.pathname);
+    }
+    var m = document.cookie.match(/googtrans=\/en\/([a-z]{2,})/);
+    if (m) { var s = document.getElementById('lang-select'); if (s) s.value = m[1]; }
+  })();
+  document.getElementById('lang-select').addEventListener('change', function () {
+    var lang = this.value, domain = location.hostname;
+    if (!lang) {
+      ['','domain='+domain,'domain=.'+domain].forEach(function(d){ document.cookie='googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'+(d?' '+d:''); });
+      location.href = location.pathname + '?lang=en'; return;
+    }
+    document.cookie = 'googtrans=/en/' + lang + '; path=/';
+    document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
+    location.reload();
+  });
+
+  // ── Init count ──
+  applyFilters();
+</script>
+</body>
+</html>
