@@ -502,7 +502,8 @@
     @media (max-width: 600px) {
       .pet-grid { grid-template-columns: 1fr; }
       .guide-card, .tip-card, .info-card { padding: 18px 16px; }
-      nav a { font-size: 11px; }
+      nav { display: none !important; }
+      .hamburger-btn { display: block; margin-left: auto; }
     }
   </style>
 </head>
@@ -512,6 +513,17 @@
 <header>
   <a href="/" class="logo">Spin<span>Rewards</span>Hub</a>
   <nav>
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Villages</a>
+    <a href="/pets-guide.html" class="active">🐾 Pets</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/card-trading-guide.html">🃏 Cards</a>
+    <a href="/events-calendar.html">📅 Events</a>
+    <a href="/faq.html">❓ FAQ</a>
+    <a href="/contact.html">✉️ Contact</a>
+  </nav>
+  <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+  <nav class="mobile-menu" id="mobileMenu">
     <a href="/">🎁 Daily Spins</a>
     <a href="/village-list.html">🏘️ Villages</a>
     <a href="/pets-guide.html" class="active">🐾 Pets</a>
@@ -537,18 +549,20 @@
 <div class="container">
 
   <!-- TOP AD -->
-  <div class="ad-slot" style="min-height:90px;">
-    <div class="ad-label">Advertisement</div>
-    <script>
-      atOptions = {
-        'key' : '6752d2791ad9aeaed5c5c889ff13df84',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+  <div class="ad-wrapper-728">
+    <div class="ad-slot" style="min-height:90px;">
+      <div class="ad-label">Advertisement</div>
+      <script>
+        atOptions = {
+          'key' : '6752d2791ad9aeaed5c5c889ff13df84',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+    </div>
   </div>
 
   <!-- TABLE OF CONTENTS -->
@@ -927,18 +941,20 @@
   </div>
 
   <!-- BOTTOM AD -->
-  <div class="ad-slot" style="min-height:90px; margin-bottom:0;">
-    <div class="ad-label">Advertisement</div>
-    <script>
-      atOptions = {
-        'key' : '6752d2791ad9aeaed5c5c889ff13df84',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+  <div class="ad-wrapper-728">
+    <div class="ad-slot" style="min-height:90px; margin-bottom:0;">
+      <div class="ad-label">Advertisement</div>
+      <script>
+        atOptions = {
+          'key' : '6752d2791ad9aeaed5c5c889ff13df84',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+    </div>
   </div>
 
 </div><!-- /container -->
@@ -1016,41 +1032,74 @@
     document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
     location.reload();
   });
-</script>
 
-<!-- Floating Buttons -->
-<button class="fab" id="theme-toggle" title="Toggle dark/light mode" aria-label="Toggle theme">🌙</button>
-<button class="fab" id="translate-btn" title="Translate page" aria-label="Translate page">🌐</button>
+  // ── Theme toggle ──
+  const themeBtn = document.getElementById('theme-toggle');
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-mode');
+    themeBtn.textContent = '☀️';
+  }
+  themeBtn.addEventListener('click', function () {
+    document.body.classList.toggle('light-mode');
+    const light = document.body.classList.contains('light-mode');
+    themeBtn.textContent = light ? '☀️' : '🌙';
+    localStorage.setItem('theme', light ? 'light' : 'dark');
+  });
 
-<!-- Translate Panel -->
-<div id="translate-panel" role="dialog" aria-label="Language selector">
-  <p>🌐 Select Language</p>
-  <select id="lang-select" aria-label="Choose language">
-    <option value="">🇬🇧 English</option>
-    <option value="tl">🇵🇭 Filipino</option>
-    <option value="id">🇮🇩 Bahasa Indonesia</option>
-    <option value="th">🇹🇭 Thai</option>
-    <option value="vi">🇻🇳 Tiếng Việt</option>
-    <option value="ms">🇲🇾 Malay</option>
-    <option value="pt">🇧🇷 Português</option>
-    <option value="es">🇪🇸 Español</option>
-    <option value="de">🇩🇪 Deutsch</option>
-    <option value="fr">🇫🇷 Français</option>
-    <option value="hi">🇮🇳 Hindi</option>
-  </select>
-</div>
+  // ── Translate panel ──
+  const tBtn = document.getElementById('translate-btn');
+  const tPanel = document.getElementById('translate-panel');
+  tBtn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    tPanel.style.display = tPanel.style.display === 'block' ? 'none' : 'block';
+  });
+  document.addEventListener('click', function (e) {
+    if (!tPanel.contains(e.target) && e.target !== tBtn) tPanel.style.display = 'none';
+  });
 
-<!-- Cloudflare Web Analytics -->
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"62d40c0995614c6f93a2871746cca36b"}'></script>
+  // ── Language switcher ──
+  (function () {
+    if (location.search.indexOf('lang=en') !== -1) {
+      var exp = 'expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      document.cookie = 'googtrans=; ' + exp;
+      document.cookie = 'googtrans=; ' + exp + '; domain=' + location.hostname;
+      document.cookie = 'googtrans=; ' + exp + '; domain=.' + location.hostname;
+      history.replaceState(null, '', location.pathname);
+    }
+    var match = document.cookie.match(/googtrans=\/en\/([a-z]{2,})/);
+    if (match) { var sel = document.getElementById('lang-select'); if (sel) sel.value = match[1]; }
+  })();
 
-<!-- Google Translate -->
-<script>
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement({ pageLanguage: 'en', autoDisplay: false }, 'gt_hidden');
+  document.getElementById('lang-select').addEventListener('change', function () {
+    var lang = this.value;
+    var domain = location.hostname;
+    if (!lang) {
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/';
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=' + domain;
+      document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + domain;
+      location.href = location.pathname + '?lang=en';
+      return;
+    }
+    document.cookie = 'googtrans=/en/' + lang + '; path=/';
+    document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
+    location.reload();
+  });
+
+  // ── Hamburger menu toggle ──
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+    });
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+      });
+    });
   }
 </script>
-<div id="gt_hidden" style="display:none"></div>
-<script async src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 </body>
 </html>

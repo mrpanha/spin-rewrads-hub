@@ -244,7 +244,8 @@
       .rarity-grid { grid-template-columns: repeat(2, 1fr); }
       .chest-grid  { grid-template-columns: 1fr; }
       .toc-grid    { grid-template-columns: 1fr 1fr; }
-      nav a { font-size: 11px; }
+      nav { display: none !important; }
+      .hamburger-btn { display: block; margin-left: auto; }
     }
   </style>
 </head>
@@ -254,6 +255,17 @@
 <header>
   <a href="/" class="logo">Spin<span>Rewards</span>Hub</a>
   <nav>
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Villages</a>
+    <a href="/pets-guide.html">🐾 Pets</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/card-trading-guide.html" class="active">🃏 Cards</a>
+    <a href="/events-calendar.html">📅 Events</a>
+    <a href="/faq.html">❓ FAQ</a>
+    <a href="/contact.html">✉️ Contact</a>
+  </nav>
+  <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+  <nav class="mobile-menu" id="mobileMenu">
     <a href="/">🎁 Daily Spins</a>
     <a href="/village-list.html">🏘️ Villages</a>
     <a href="/pets-guide.html">🐾 Pets</a>
@@ -279,18 +291,20 @@
 <div class="container">
 
   <!-- TOP AD -->
-  <div class="ad-slot" style="min-height:90px;">
-    <div class="ad-label">Advertisement</div>
-    <script>
-      atOptions = {
-        'key' : '6752d2791ad9aeaed5c5c889ff13df84',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+  <div class="ad-wrapper-728">
+    <div class="ad-slot" style="min-height:90px;">
+      <div class="ad-label">Advertisement</div>
+      <script>
+        atOptions = {
+          'key' : '6752d2791ad9aeaed5c5c889ff13df84',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+    </div>
   </div>
 
   <!-- INTRO -->
@@ -723,18 +737,20 @@
   </div>
 
   <!-- BOTTOM AD -->
-  <div class="ad-slot" style="min-height:90px; margin-bottom:0;">
-    <div class="ad-label">Advertisement</div>
-    <script>
-      atOptions = {
-        'key' : '6752d2791ad9aeaed5c5c889ff13df84',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+  <div class="ad-wrapper-728">
+    <div class="ad-slot" style="min-height:90px; margin-bottom:0;">
+      <div class="ad-label">Advertisement</div>
+      <script>
+        atOptions = {
+          'key' : '6752d2791ad9aeaed5c5c889ff13df84',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+    </div>
   </div>
 
 </div><!-- /container -->
@@ -831,6 +847,21 @@
     document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
     location.reload();
   });
+
+  // ── Hamburger menu toggle ──
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+    });
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+      });
+    });
+  }
 </script>
 </body>
 </html>

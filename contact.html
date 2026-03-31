@@ -72,7 +72,7 @@
     footer a{color:var(--accent);text-decoration:none}
     .spinner{width:18px;height:18px;border:2px solid rgba(13,13,26,.3);border-top-color:#0d0d1a;border-radius:50%;animation:spin .7s linear infinite;display:none}
     @keyframes spin{to{transform:rotate(360deg)}}
-    @media(max-width:600px){.form-card{padding:22px 16px}.form-row{flex-direction:column}nav a{font-size:11px}}
+    @media(max-width:600px){.form-card{padding:22px 16px}.form-row{flex-direction:column}nav{display:none!important}.hamburger-btn{display:block;margin-left:auto}}
   </style>
 </head>
 <body>
@@ -80,6 +80,17 @@
 <header>
   <a href="/" class="logo">Spin<span>Rewards</span>Hub</a>
   <nav>
+    <a href="/">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Villages</a>
+    <a href="/pets-guide.html">🐾 Pets</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/card-trading-guide.html">🃏 Cards</a>
+    <a href="/events-calendar.html">📅 Events</a>
+    <a href="/faq.html">❓ FAQ</a>
+    <a href="/contact.html" class="active">✉️ Contact</a>
+  </nav>
+  <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+  <nav class="mobile-menu" id="mobileMenu">
     <a href="/">🎁 Daily Spins</a>
     <a href="/village-list.html">🏘️ Villages</a>
     <a href="/pets-guide.html">🐾 Pets</a>
@@ -295,6 +306,21 @@
     document.cookie='googtrans=/en/'+lang+'; path=/; domain='+domain;
     location.reload();
   });
+
+  // ── Hamburger menu toggle ──
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+    });
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+      });
+    });
+  }
 </script>
 </body>
 </html>

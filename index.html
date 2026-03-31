@@ -419,6 +419,17 @@
       font-family: 'Nunito', sans-serif;
     }
 
+    /* ===== HAMBURGER MENU ===== */
+    .hamburger-btn { display: none; background: none; border: none; color: var(--accent); font-size: 24px; cursor: pointer; padding: 8px 12px; line-height: 1; }
+    nav.mobile-menu { position: absolute; top: 100%; left: 0; right: 0; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%); border-bottom: 2px solid var(--accent); flex-direction: column; gap: 0; display: none; padding: 0; border-radius: 0; }
+    nav.mobile-menu.active { display: flex; }
+    nav.mobile-menu a { padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,.1); }
+    nav.mobile-menu a:last-child { border-bottom: none; }
+
+    /* ===== AD RESPONSIVE ===== */
+    .ad-slot iframe { max-width: 100% !important; }
+    .ad-wrapper-728 { width: 100%; max-width: 728px; overflow: hidden; margin: 0 auto; text-align: center; }
+
     /* ===== RESPONSIVE ===== */
     @media (max-width: 600px) {
       .hero h1 { font-size: 24px; }
@@ -426,8 +437,8 @@
       .claim-btn { padding: 9px 14px; font-size: 13px; }
       .td-link { width: 30%; }
       .content-card { padding: 20px 16px; }
-      nav { gap: 10px; }
-      nav a { font-size: 11px; }
+      nav { display: none !important; }
+      .hamburger-btn { display: block; margin-left: auto; }
     }
   </style>
 </head>
@@ -437,6 +448,17 @@
 <header>
   <a href="/" class="logo">Spin<span>Rewards</span>Hub</a>
   <nav>
+    <a href="/" class="active">🎁 Daily Spins</a>
+    <a href="/village-list.html">🏘️ Villages</a>
+    <a href="/pets-guide.html">🐾 Pets</a>
+    <a href="/free-spins-guide.html">💡 Free Spins</a>
+    <a href="/card-trading-guide.html">🃏 Cards</a>
+    <a href="/events-calendar.html">📅 Events</a>
+    <a href="/faq.html">❓ FAQ</a>
+    <a href="/contact.html">✉️ Contact</a>
+  </nav>
+  <button class="hamburger-btn" id="hamburgerBtn">☰</button>
+  <nav class="mobile-menu" id="mobileMenu">
     <a href="/" class="active">🎁 Daily Spins</a>
     <a href="/village-list.html">🏘️ Villages</a>
     <a href="/pets-guide.html">🐾 Pets</a>
@@ -464,16 +486,18 @@
   <!-- ===== TOP AD SLOT ===== -->
   <div class="ad-slot" style="min-height:90px;">
     <div class="ad-label">Advertisement</div>
-    <script>
-      atOptions = {
-        'key' : '6752d2791ad9aeaed5c5c889ff13df84',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+    <div class="ad-wrapper-728">
+      <script>
+        atOptions = {
+          'key' : '6752d2791ad9aeaed5c5c889ff13df84',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+    </div>
   </div>
 
   <!-- Quick navigation links -->
@@ -744,16 +768,18 @@
   <!-- ===== BOTTOM AD SLOT ===== -->
   <div class="ad-slot" style="min-height:90px; margin-bottom:0;">
     <div class="ad-label">Advertisement</div>
-    <script>
-      atOptions = {
-        'key' : '6752d2791ad9aeaed5c5c889ff13df84',
-        'format' : 'iframe',
-        'height' : 90,
-        'width' : 728,
-        'params' : {}
-      };
-    </script>
-    <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+    <div class="ad-wrapper-728">
+      <script>
+        atOptions = {
+          'key' : '6752d2791ad9aeaed5c5c889ff13df84',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/6752d2791ad9aeaed5c5c889ff13df84/invoke.js"></script>
+    </div>
   </div>
 
 </div><!-- /container -->
@@ -861,6 +887,21 @@
     document.cookie = 'googtrans=/en/' + lang + '; path=/; domain=' + domain;
     location.reload();
   });
+
+  // ── Hamburger menu toggle ──
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('active');
+    });
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+      });
+    });
+  }
 </script>
 </body>
 </html>
